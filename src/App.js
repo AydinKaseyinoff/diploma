@@ -1,6 +1,5 @@
 import { Link, Route, Routes } from "react-router-dom";
 
-
 function App() {
   return (
     <div className="App">
@@ -11,7 +10,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<h2>Home page</h2>} />
+        <Route path="/about" element={<h2>About page</h2>} />
       </Routes>
+
     </div>
   );
 }
