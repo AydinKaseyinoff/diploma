@@ -1,22 +1,31 @@
-.Nav ul {
-    display: flex;
-    border-bottom: 5px solid black;
-    padding: 10px;
-    justify-content: center;
-}
 .Nav .NavItem a {
-    color: tomato;
-    font-size: 25px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: all 300ms;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
+
 .Nav .NavItem a:hover {
-    color: rgb(113, 48, 37);
-    border-bottom: 1px solid rgb(113, 48, 37);
-    padding-right: 0;
+  background-color: #2e2525;
 }
-.Nav .NavItem {
-    list-style-type: none;
-    padding-right: 30px;
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #080404;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.topbar li {
+  margin-left: 1rem;
 }

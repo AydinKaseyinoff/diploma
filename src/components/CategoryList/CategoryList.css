@@ -1,0 +1,12 @@
+.CategoryList {
+    background-color: #fff;
+}
+.CategoryList ul {
+    padding: 0;
+}
+.CategoryList li {
+    list-style: none;
+}
+.CategoryList a {
+    color: #000000;
+}
