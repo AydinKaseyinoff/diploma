@@ -4,6 +4,9 @@
 .CategoryList ul {
     padding: 30px;
 }
+ul {
+    padding: 0;
+}
 .CategoryList li {
     list-style: none;
     text-align: -webkit-center;
