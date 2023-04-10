@@ -14,10 +14,10 @@
 
 .topbar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #080404;
+  background-color: #666666;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,4 +28,11 @@
 
 .topbar li {
   margin-left: 1rem;
+}
+
+.logo {
+  width: 40px;
+}
+img:hover {
+  border:rgba(0, 0, 0, 0.1) 1px solid;
 }

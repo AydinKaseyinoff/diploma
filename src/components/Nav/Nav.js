@@ -1,10 +1,16 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
+import logo from "../../assets/logo.png";
 
 export default function Nav(props) {
   return (
     <div className="Nav">
       <nav className="topbar">
+        <div className="Logo">
+          <NavLink to="/">
+            <img src={logo} alt="logo" className="logo" />
+          </NavLink>
+        </div>
         <ul>
           <li className="NavItem">
             <NavLink to="/">Home</NavLink>

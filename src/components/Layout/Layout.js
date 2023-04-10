@@ -1,20 +1,21 @@
-import Nav from "../Nav/Nav";
 import "./Layout.css"
-import Logo from "../Logo/Logo";
 import CategoryList from "../CategoryList/CategoryList";
+import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 
 export default function Layout(props) {
   return (
     <div className="Layout">
       <header>
-        <Logo />
         <Nav />
       </header>
       <aside>
         <CategoryList />
       </aside>
       <main>{props.children}</main>
-      <footer>Footer</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Deliver from "./pages/Deliver";
 import Category from "./pages/Category";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/deliver" element={<Deliver />} />
             <Route path="/category" element={<Category />} />
+
+            <Route path="*" element={<NotFound />} />
           </Routes>
       </Layout>
     </div>
