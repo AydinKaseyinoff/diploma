@@ -11,8 +11,6 @@
     "aside main"
     "footer footer";
   grid-template-columns: 1fr 7fr;
-  max-width: 1300px;
-  margin: 0 auto;
   background-color: #ffffff;
 }
 
@@ -22,6 +20,7 @@
 
 .Layout aside {
   grid-area: aside;
+  min-height: 100vh;
 }
 
 .Layout main {

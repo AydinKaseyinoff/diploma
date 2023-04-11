@@ -1,5 +1,6 @@
 .CategoryList {
     background-color: #fff;
+    min-height: 100vh;
 }
 .CategoryList ul {
     padding: 30px;
