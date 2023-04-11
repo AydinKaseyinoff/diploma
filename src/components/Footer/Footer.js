@@ -1,15 +1,16 @@
 import React from "react";
 import "./Footer.css";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
     <footer>
       <nav>
         <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Каталог</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+          <li><NavLink to="/deliver">Deliver</NavLink></li>
         </ul>
       </nav>
       <p>&copy; {new Date().getFullYear()} Аксессуары для Телефона</p>
