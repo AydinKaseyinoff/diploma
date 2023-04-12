@@ -13,7 +13,7 @@ function Footer() {
           <li><NavLink to="/deliver">Deliver</NavLink></li>
         </ul>
       </nav>
-      <p>&copy; {new Date().getFullYear()} Аксессуары для Телефона</p>
+      <p>&copy; {new Date().getFullYear()} Phone Accessories</p>
     </footer>
   );
 }

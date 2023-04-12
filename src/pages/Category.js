@@ -1,21 +1,19 @@
-import { useParams } from "react-router";
+import { useMatch } from "react-router";
 import NotFound from "./NotFound";
+import { useContext } from "react";
+import { AppContext } from "../App";
 
 export default function Category(props) {
-  const { slug } = useParams();
+  const { params } = useMatch("/categories/:slug");
 
-  const categories = [
-    { id: 1, name: "Phone Cases", slug: "phone-cases" },
-    { id: 2, name: "Chargers and Cables", slug: "chargers-and-cables" },
-    { id: 3, name: "Portable Power Banks", slug: "portable-power-banks" },
-    { id: 4, name: "Audio and Video Accessories", slug: "audio-and-video-accessories" },
-  ];
+  const categories = useContext(AppContext);
   const category = categories.find(
-    (category) => category.slug === slug
-  );
-
+    (category) => category.slug === params.slug
+  )
+  console.log(params)
+  
   if (!category) {
-    return <NotFound />
+    return <NotFound />;
   }
 
   return (
