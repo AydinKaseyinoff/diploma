@@ -9,7 +9,7 @@ export default function Nav(props) {
         <ul>
           <NavLink to="/" className="Logo">
             <img src={ wink } alt="wink" />
-            <h1>SMARTFON</h1>
+            <h1><span>SMART</span>PHONE</h1>
           </NavLink>
         </ul>
         <ul>

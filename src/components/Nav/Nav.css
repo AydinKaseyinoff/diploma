@@ -17,11 +17,17 @@
   align-items: center;
 }
 .Logo h1 {
-  font-size: 25px;
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 700;
+  font-style: italic;
 }
 .Logo img {
   width: 30px;
   padding-right: 10px;
+}
+span {
+  color: black;
 }
 .topbar {
   display: flex;
