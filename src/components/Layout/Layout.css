@@ -1,8 +1,9 @@
 .Layout {
   display: grid;
-  grid-template-areas: "header header"
-                       "aside main"
-                       "footer footer";
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
   grid-template-columns: 1fr 6fr;
 }
 .Layout header {
@@ -20,6 +21,8 @@
 }
 .Layout footer {
   grid-area: footer;
+  display: flex;
+  width: 100%;
 }
 
 .Layout .logo {
