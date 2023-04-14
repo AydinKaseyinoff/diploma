@@ -16,6 +16,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
 const db = getFirestore(app);
 
+// Export collections
 export const categoryCollection = collection(db, "categories");
+export const productsCollection = collection(db, "products");

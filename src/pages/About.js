@@ -1,30 +1,23 @@
+import Q1 from "../assets/q1.jpg";
+
 export default function About() {
   return (
     <div className="About">
       <h1>About</h1>
+      <img src={Q1} alt="q1" className="q1" />  
       <p>
-        Здравствуйте!
+        Welcome to our music store! We are a team of passionate music enthusiasts who are dedicated to providing our customers with the best possible experience when it comes to purchasing musical instruments, accessories, and equipment.
         <br />
-        Мы рады приветствовать Вас на странице "О нас".
+        Our store has been serving the local music community for many years, and we have built a strong reputation for offering high-quality products at competitive prices. Whether you are a professional musician, a beginner, or simply looking for a gift for a music lover, we have everything you need to help you achieve your musical goals.
         <br />
-         Мы -
-        команда профессионалов, занимающаяся различными
+        At our store, we understand that music is more than just a hobby or a pastime - it is a way of life. That is why we take pride in offering a wide selection of musical instruments and equipment, including guitars, basses, drums, keyboards, and more, from some of the most respected brands in the industry.
         <br />
-         проектами в области технологий, маркетинга и дизайна.
+        
+        We also offer a range of services, including instrument repairs, rentals, and lessons, to help our customers get the most out of their musical experience. Our knowledgeable and friendly staff are always on hand to provide expert advice and guidance, whether you are looking for a new instrument or simply need some help with a repair or maintenance issue.
         <br />
-          Наша команда состоит из
-        высококвалифицированных специалистов, которые постоянно совершенствуют
-        свои знания и навыки, чтобы быть на переднем крае инноваций в своих
-        областях. Мы убеждены, что технологии должны служить человеческим
-        потребностям, поэтому мы создаем продукты и сервисы, которые делают
-        жизнь наших пользователей лучше и более комфортной. Мы стремимся к
-        постоянному улучшению качества нашей работы и готовы принимать любые
-        вызовы, чтобы достичь поставленных целей. Наша команда всегда открыта
-        для новых проектов и партнерств, поэтому не стесняйтесь связаться с
-        нами, если у Вас есть интересные предложения. Благодарим Вас за
-        посещение нашей страницы "О нас". Если у Вас есть какие-либо вопросы или
-        пожелания, пожалуйста, свяжитесь с нами. Мы будем рады общению с Вами.
+        Thank you for choosing our music store for all your musical needs. We look forward to helping you on your musical journey and providing you with the best possible service and support.
       </p>
+      
     </div>
   );
 }

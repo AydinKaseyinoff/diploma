@@ -1,0 +1,32 @@
+.BoxList img {
+  height: 300px;
+  border-radius: 10px;
+
+}
+
+.BoxList a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+.BoxList a:hover {
+  color: #000;
+}
+
+.BoxList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.ProductList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

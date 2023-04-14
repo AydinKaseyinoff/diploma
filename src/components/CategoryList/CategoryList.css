@@ -1,23 +1,23 @@
 .CategoryList {
-    background-color: #fff;
-    min-height: 100vh;
+  padding-left: 39px;
 }
-.CategoryList ul {
-    padding: 30px;
-}
+
 ul {
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.CategoryList li {
-    list-style: none;
-    text-align: -webkit-center;
-    padding: 5px 2px;
+
+li {
+  margin: 0.5rem 0;
 }
-.CategoryList a {
-    color: #000000;
-    text-decoration: none;
+
+a {
+  text-decoration: none;
+  color: #f1f1f1;
 }
-.CategoryList a:hover {
-    border-bottom: 1px solid #000000;
-    transition: all 0.2s ease-in-out;
+
+a:hover {
+  color: #f1f1f1;
+  text-decoration: underline;
 }
