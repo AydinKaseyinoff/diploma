@@ -1,17 +1,15 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
+import wink from "../../assets/wink.png";
 
 export default function Nav(props) {
   return (
     <div className="Nav">
       <nav className="topbar">
         <ul>
-          <NavLink to="/">
-            <img
-              src="https://content2.rozetka.com.ua/widget_logotype/full/original/229862237.svg"
-              alt="logo"
-              className="logo"
-            />
+          <NavLink to="/" className="Logo">
+            <img src={ wink } alt="wink" />
+            <h1>SMARTFON</h1>
           </NavLink>
         </ul>
         <ul>

@@ -12,12 +12,22 @@
   background-color: #ffffff;
   color: #370F0F;
 }
-
+.Logo {
+  display: flex;
+  align-items: center;
+}
+.Logo h1 {
+  font-size: 25px;
+}
+.Logo img {
+  width: 30px;
+  padding-right: 10px;
+}
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0 36px;
   background-color: #666666;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
