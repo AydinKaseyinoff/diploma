@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 import React from 'react';
@@ -16,10 +17,10 @@ const Footer = () => {
           <div className="col-md-4">
             <h4>Ссылки</h4>
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li><a href="#">О нас</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><NavLink to="#">Главная</NavLink></li>
+              <li><NavLink to="#">Каталог</NavLink></li>
+              <li><NavLink to="#">О нас</NavLink></li>
+              <li><NavLink to="#">Контакты</NavLink></li>
             </ul>
           </div>
           <div className="col-md-4">
