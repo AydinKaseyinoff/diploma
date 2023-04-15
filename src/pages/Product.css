@@ -1,0 +1,8 @@
+.Product {
+    display: flex;
+    align-items: end;
+}
+.Product span {
+    font-size: 40px;
+    color: #004a00;
+}
