@@ -3,6 +3,7 @@ import { useMatch } from "react-router";
 import { AppContext } from "../App";
 import NotFound from "./NotFound";
 import "./Product.css"
+import AddToCart from "../components/AddToCart/AddToCart";
 
 export default function Product() {
   const { params } = useMatch("/products/:slug");
@@ -20,6 +21,9 @@ export default function Product() {
         <img src={product.picture} alt={product.name} />
       </div>
       <span>{product.price}₽</span>
+      <div>
+        <AddToCart product={products} />
+      </div>
     </div>
   );
 }

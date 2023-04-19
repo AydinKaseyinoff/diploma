@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import wink from "../../assets/wink.png";
+import CartLink from "../CartLink/CartLink";
 
 export default function Nav(props) {
   return (
@@ -24,6 +25,9 @@ export default function Nav(props) {
           </li>
           <li className="NavItem">
             <NavLink to="/deliver">Deliver</NavLink>
+          </li>
+          <li>
+            <CartLink />
           </li>
         </ul>
       </nav>

@@ -1,0 +1,18 @@
+.CartItem a {
+    color: black;
+    font-size: 25px;
+    padding-right: 60px;
+}
+.CartItem a {
+    align-items: center;
+    display: flex;
+}
+.CartList .CartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.CartList .CartItem img {
+    width: 50px;
+}

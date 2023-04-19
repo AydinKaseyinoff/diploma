@@ -41,6 +41,7 @@ span {
 .topbar ul {
   display: flex;
   list-style: none;
+  align-items: baseline;
 }
 
 .topbar li {
