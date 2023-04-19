@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import wink from "../../assets/wink.png";
 import CartLink from "../CartLink/CartLink";
+import Auth from "../Auth/Auth";
 
 export default function Nav(props) {
   return (
@@ -28,6 +29,9 @@ export default function Nav(props) {
           </li>
           <li>
             <CartLink />
+          </li>
+          <li>
+            <Auth />
           </li>
         </ul>
       </nav>
