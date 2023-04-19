@@ -1,6 +1,6 @@
 .Product {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 }
 .Product span {
     font-size: 40px;
