@@ -1,4 +1,4 @@
-import { addDoc, doc } from "firebase/firestore/lite";
+import { addDoc } from "firebase/firestore/lite";
 import "./OrderForm.css";
 import { ordersCollection } from "../../firebase";
 import { useContext } from "react";
