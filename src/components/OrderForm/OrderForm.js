@@ -26,7 +26,7 @@ export default function OrderForm() {
       address: formData.get("address"),
       cart: cart,
     })
-    .then(doc => {
+    .then(doс => {
         setCart({});
         navigate('/thank-you');
     })
