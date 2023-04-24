@@ -18,9 +18,6 @@ export default function Auth() {
     setShowProfile(false);
   };
 
-  const handleAuthSuccess = () => {
-    setShowImage(false);
-  };
 
   return (
     <div className="Auth">

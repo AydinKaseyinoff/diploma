@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AppContext } from "../../App";
-import "./OrderList.css";
+
 
 export default function OrderList() {
   const { orders, products } = useContext(AppContext);
