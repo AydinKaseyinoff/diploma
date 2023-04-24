@@ -32,7 +32,7 @@ export default function CartList() {
         <input
           type="number"
           value={cart[product.id]}
-          min="1"
+          min={1}
           onChange={(event) => onQuantityChange(product, +event.target.value)}
         />
         {cart[product.id]}

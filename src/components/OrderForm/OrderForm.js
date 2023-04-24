@@ -6,11 +6,15 @@ import { AppContext } from "../../App";
 import { useNavigate } from "react-router";
 
 export default function OrderForm() {
-  const { cart, setCart } = useContext(AppContext);
+  const { cart, setCart, user } = useContext(AppContext);
   const navigate = useNavigate();
 
   if(Object.keys(cart).length === 0) {
     return "Your cart is empty"
+  }
+
+  if(!user) {
+    return "Please login to create an order"
   }
 
 
@@ -22,7 +26,7 @@ export default function OrderForm() {
     addDoc(ordersCollection, {
       name: formData.get("name"),
       phone: formData.get("phone"),
-      email: formData.get("email"),
+      user: user.uid,
       address: formData.get("address"),
       cart: cart,
     })

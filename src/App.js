@@ -8,14 +8,16 @@ import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
 import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, onAuthChange, productsCollection } from "./firebase";
+import { categoryCollection, onAuthChange, productsCollection, ordersCollection } from "./firebase";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
+import Orders from "./pages/Orders";
 
 export const AppContext = createContext({
   categories: [],
   products: [],
+  orders: [],
   
   cart: {},
   setCart: () => {},
@@ -26,6 +28,7 @@ export const AppContext = createContext({
 function App() {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [orders, setOrders] = useState([])
   const [cart, setCart] = useState(() => {
     return JSON.parse(localStorage.getItem('cart')) || {}
   });
@@ -59,6 +62,16 @@ function App() {
         );
       }
       )
+    getDocs(ordersCollection)
+      .then(({ docs }) => {
+        console.log(docs);
+        setOrders(
+          docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+        );
+      });
     
     onAuthChange(user => {
       setUser(user);
@@ -69,7 +82,7 @@ function App() {
 
   return (
     <div className="App">
-      <AppContext.Provider value={{ categories, products, cart, setCart, user }}>
+      <AppContext.Provider value={{ categories, products, cart, setCart, user, orders }}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -80,6 +93,7 @@ function App() {
             <Route path="/products/:slug" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/orders" element={<Orders />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
