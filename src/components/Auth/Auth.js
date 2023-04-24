@@ -8,7 +8,6 @@ import "./Auth.css";
 export default function Auth() {
   const { user } = useContext(AppContext);
   const [showProfile, setShowProfile] = useState(false);
-  const [showImage, setShowImage] = useState(!user);
 
   const handleProfileClick = () => {
     setShowProfile(true);
