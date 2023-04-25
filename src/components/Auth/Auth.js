@@ -8,6 +8,7 @@ import "./Auth.css";
 export default function Auth() {
   const { user } = useContext(AppContext);
   const [showProfile, setShowProfile] = useState(false);
+  const [showImage] = useState(!user);
 
   const handleProfileClick = () => {
     setShowProfile(true);
@@ -41,8 +42,11 @@ export default function Auth() {
           <p>Email: {user?.email}</p>
           <p>Имя: {user?.displayName}</p>
           <p>Фото: <img src={user?.photoURL || "https://th.bing.com/th/id/OIP.P3_9dcThQDWbJhAHh9UV9AHaHa?pid=ImgDet&rs=1"} alt="User avatar" /></p>
-          <button onClick={handleProfileClose}>Закрыть</button>
-          {user ? <button onClick={logOut}>Sign out</button> : null}
+          <div className="Btn-s">
+            <button className="CloseBtn" onClick={handleProfileClose}>Close</button>
+            {user ? <button className="S-Out-Btn" onClick={logOut}>Sign out</button> : null}
+          </div>
+          
         </div>
       )}
     </div>

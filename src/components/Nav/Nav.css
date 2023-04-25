@@ -10,7 +10,7 @@
 
 .Nav .NavItem a:hover {
   background-color: #ffffff;
-  color: #370F0F;
+  color: #370f0f;
 }
 .Logo {
   display: flex;
@@ -41,9 +41,10 @@ span {
 .topbar ul {
   display: flex;
   list-style: none;
-  align-items: baseline;
 }
 
 .topbar li {
   margin-left: 1rem;
+  display: flex;
+  align-items: center;
 }
