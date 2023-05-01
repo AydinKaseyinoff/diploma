@@ -1,3 +1,7 @@
 .CartLink {
     align-items: center;
 }
+.CartLink a {
+    display: flex;
+    align-items: center;
+}

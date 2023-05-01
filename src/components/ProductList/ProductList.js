@@ -3,13 +3,14 @@ import "./ProductList.css";
 import { AppContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import AddToCart from "../AddToCart/AddToCart";
+import AddProduct from "../AddProducts/AddProducts";
 
 export default function ProductList({ category }) {
   const { products } = useContext(AppContext);
 
   const output = products.filter(products => products.category === category.id)
   .map(products => (
-    <div className="BoxList">
+    <div key={products.id} className="BoxList">
       <img src={products.picture} alt={products.name} />
       <NavLink to={'/products/' + products.slug}>
         {products.name}
@@ -22,6 +23,7 @@ export default function ProductList({ category }) {
   return (
     <div className="ProductList">
       {output}
+      <AddProduct />
     </div>
   )
 }

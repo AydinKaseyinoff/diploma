@@ -1,0 +1,18 @@
+.AddToCart button {
+    background-color: #666666a1;
+    transition: all 300ms;
+}
+
+.AddToCart button:hover {
+    background-color: #66666675;
+}
+
+.AddToCart img {
+    width: 30px;
+    height: 100%;
+}
+.AddToCart .product-num {
+    position: absolute;
+    border-radius: 10px;
+    background: #ff0000c9;
+}

@@ -7,8 +7,8 @@ import Deliver from "./pages/Deliver";
 import Category from "./pages/Category";
 import NotFound from "./pages/NotFound";
 import { createContext, useEffect, useState } from "react";
-import { getDocs } from "firebase/firestore/lite";
-import { categoryCollection, onAuthChange, productsCollection, ordersCollection } from "./firebase";
+import { getDocs } from "firebase/firestore";
+import { onAuthChange, productsCollection, ordersCollection, onCategoriesLoad } from "./firebase";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import ThankYou from "./pages/ThankYou";
@@ -40,16 +40,7 @@ function App() {
   }, [cart] )
 
   useEffect(() => {
-    getDocs(categoryCollection)
-      .then(({ docs }) => {
-        console.log(docs);
-        setCategories(
-          docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }))
-        );
-      });
+    onCategoriesLoad(setCategories)
 
     getDocs(productsCollection)
       .then(({ docs }) => {
@@ -72,8 +63,12 @@ function App() {
           }))
         );
       });
+
     
     onAuthChange(user => {
+      if (user) {
+        user.isAdmin = user.email === "kaseyinov@gmail.com"
+      }
       setUser(user);
     });
 
