@@ -4,4 +4,13 @@
 .CartLink a {
     display: flex;
     align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.CartLink a:hover {
+    background-color: #ffffff;
+    color: #370f0f;
+    border-radius: 0.5rem;
+}
+.CartLink img:hover {
+    filter:invert(1);
 }

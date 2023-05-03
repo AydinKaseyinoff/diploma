@@ -1,3 +1,4 @@
+import "./ThankYou.css"
 export default function ThankYou() {
     return (
       <div className="ThankYou">

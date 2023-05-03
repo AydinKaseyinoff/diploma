@@ -16,3 +16,12 @@
 .CartList .CartItem img {
     width: 50px;
 }
+.cart-inpt input {
+    width: 40px;
+}
+.remove-btn button:hover {
+    background-color: #ce1312;
+    transition: all 50ms ease-in;
+    border-radius: 3px;
+    cursor: pointer;
+}

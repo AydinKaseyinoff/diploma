@@ -20,8 +20,8 @@ export default function Product() {
         <h1>{product.description}</h1>
         <img src={product.picture} alt={product.name} />
       </div>
-      <span>{product.price}₽</span>
       <div>
+        <span>{product.price}₽</span>
         <AddToCart product={products} />
       </div>
     </div>

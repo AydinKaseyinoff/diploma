@@ -1,3 +1,7 @@
 .Footer img {
   width: 30px;
 }
+.Footer {
+  position: fixed;
+  bottom: 0;
+}

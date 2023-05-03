@@ -29,15 +29,19 @@ export default function CartList() {
           <img src={product.picture} alt={product.name} />
         </div>
         <Link to={"/product/" + product.slug}>{product.name}</Link>
-        <input
-          type="number"
-          value={cart[product.id]}
-          min={1}
-          onChange={(event) => onQuantityChange(product, +event.target.value)}
-        />
-        {cart[product.id]}
+        <div className="cart-inpt">
+          <input
+            type="number"
+            value={cart[product.id]}
+            min={1}
+            max={10}
+            onChange={(event) => onQuantityChange(product, +event.target.value)}
+          />
+        </div>
         <span>{cart[product.id] * product.price} ₽</span>
-        <button onClick={() => onItemRemove(product)}>Remove</button>
+        <div className="remove-btn">
+          <button onClick={() => onItemRemove(product)}>Remove</button>
+        </div>
       </div>
     ));
   return <div className="CartList">{output}</div>;

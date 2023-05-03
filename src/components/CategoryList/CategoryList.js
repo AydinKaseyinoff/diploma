@@ -1,37 +1,34 @@
 import { NavLink } from "react-router-dom";
-import "./CategoryList.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../App";
+import "./CategoryList.css";
 import AddCategory from "../AddCategory/AddCategory";
 import DeleteCategory from "../DeleteCategory/DeleteCategory";
-import Footer from "../Footer/Footer";
 
 export default function CategoryList() {
   const { categories } = useContext(AppContext);
-  const [isVisible, setIsVisible] = useState(false);
 
   const output = categories.map((category) => (
     <li key={category.id}>
       <NavLink to={`/categories/${category.slug}`}>{category.name}</NavLink>
+
+      <DeleteCategory category={category} />
     </li>
   ));
 
-  const toggleVisibility = () => setIsVisible(!isVisible);
-
   return (
     <div className="CategoryList">
-      <button onClick={toggleVisibility}>
-        {isVisible ? "Hide categories" : "Show categories"}
-      </button>
-      {isVisible && (
-        <>
-          <h3>Categories</h3>
-          <ul>{output}</ul>
-          <AddCategory />
-          <DeleteCategory category={categories} />
-          <Footer />
-        </>
-      )}
+      <h3>Categories</h3>
+      <ul>{output}</ul>
+      <AddCategory />
+      <div className="YouTube">
+        <a href="https://youtu.be/FzG4uDgje3M?t=9">
+          <img
+            src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png"
+            alt="youtube"
+          />
+        </a>
+      </div>
     </div>
   );
 }
