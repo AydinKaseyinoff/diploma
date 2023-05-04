@@ -57,3 +57,6 @@
 .buy-button:hover {
   background-color: #e67e22;
 }
+.text {
+  direction: rtl;
+}
