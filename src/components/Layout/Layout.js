@@ -1,7 +1,7 @@
 import Nav from "../Nav/Nav";
 import "./Layout.css"
 import CategoryList from "../CategoryList/CategoryList";
-import Footer from "../Footer/Footer";
+
 
 export default function Layout(props) {
   return (
