@@ -28,3 +28,8 @@
 .Layout .logo {
   max-width: 200px;
 }
+.Hide-Button {
+  position: fixed;
+  top: 90px;
+  width: 240px;
+}

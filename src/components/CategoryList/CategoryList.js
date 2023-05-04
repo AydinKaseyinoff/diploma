@@ -5,7 +5,10 @@ import "./CategoryList.css";
 import AddCategory from "../AddCategory/AddCategory";
 import DeleteCategory from "../DeleteCategory/DeleteCategory";
 
+
 export default function CategoryList() {
+
+
   const { categories } = useContext(AppContext);
 
   const output = categories.map((category) => (
@@ -22,7 +25,7 @@ export default function CategoryList() {
       <ul>{output}</ul>
       <AddCategory />
       <div className="YouTube">
-        <a href="https://youtu.be/FzG4uDgje3M?t=9">
+        <a href="https://youtu.be/2CLAcsFNTvs?t=23">
           <img
             src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png"
             alt="youtube"
