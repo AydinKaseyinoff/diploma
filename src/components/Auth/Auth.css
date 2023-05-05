@@ -1,12 +1,39 @@
-.Auth img{
-    width: 50px;
-    border-radius: 25px;
-    cursor: pointer;
+* {
+  transition: all 700ms ease-in-out;
 }
 .Auth .S-Out-Btn {
-    background-color: rgb(171, 33, 33);
+  background-color: rgb(171, 33, 33);
 }
 .Auth .Btn-s {
-    justify-content: space-between;
-    display: flex;
+  justify-content: space-between;
+  display: flex;
 }
+
+.img-container img {
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  background-color: #666666;
+  padding: 10px;
+  border: 1px solid black;
+  transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+}
+
+.img-container:hover .img-menu {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+

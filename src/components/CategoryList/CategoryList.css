@@ -26,3 +26,6 @@ a:hover {
   bottom: 0;
   width: 30px;
 }
+.icon-category {
+  display: flex;
+}

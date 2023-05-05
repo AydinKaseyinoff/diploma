@@ -1,4 +1,5 @@
 .Layout {
+  position: relative;
   display: grid;
   grid-template-areas:
     "header header"
@@ -6,30 +7,52 @@
     "footer footer";
   grid-template-columns: 1fr 6fr;
 }
+
 .Layout header {
   grid-area: header;
 }
+
 .Layout aside {
   grid-area: aside;
-  width: 240px;
-  display: flex;
-  background-color: #666666;
+  width: 80px;
+  position: absolute;
   min-height: 100vh;
+  left: -20px;
+  top: 0;
+  bottom: 0;
+  background-color: #666666;
+  transition: width 0.3s ease;
 }
+
+.Layout aside:hover {
+  width: 220px;
+}
+
+.Layout aside:hover > .CategoryList {
+  display: block;
+}
+
 .Layout main {
   grid-area: main;
 }
+
 .Layout footer {
   grid-area: footer;
   display: flex;
   width: 100%;
 }
 
-.Layout .logo {
-  max-width: 200px;
+.CategoryList {
+  display: none;
+  padding: 20px;
 }
-.Hide-Button {
-  position: fixed;
-  top: 90px;
-  width: 240px;
+
+.aside img {
+  width: 40px;
+  position: absolute;
+  left: 30px;
+}
+
+.Layout aside:hover > img {
+  display: none;
 }

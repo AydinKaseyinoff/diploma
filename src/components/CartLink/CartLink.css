@@ -11,6 +11,6 @@
     color: #370f0f;
     border-radius: 0.5rem;
 }
-.CartLink img:hover {
+.CartLink :hover > img {
     filter:invert(1);
 }

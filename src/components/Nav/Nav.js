@@ -10,8 +10,10 @@ export default function Nav(props) {
       <nav className="topbar">
         <ul>
           <NavLink to="/" className="Logo">
-            <img src={ wink } alt="wink" />
-            <h1><span>SMART</span>PHONE</h1>
+            <img src={wink} alt="wink" />
+            <h1>
+              <span>SMART</span>PHONE
+            </h1>
           </NavLink>
         </ul>
         <ul>
@@ -29,6 +31,12 @@ export default function Nav(props) {
           </li>
           <li>
             <CartLink />
+          </li>
+          <li>
+            <form className="SearchForm">
+              <input type="text" placeholder="Search..." />
+              <button type="submit">Search</button>
+            </form>
           </li>
           <li>
             <Auth />
