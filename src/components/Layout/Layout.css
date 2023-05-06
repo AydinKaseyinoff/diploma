@@ -52,6 +52,9 @@
   position: absolute;
   left: 30px;
 }
+.aside .in-img {
+  filter: invert(1);
+}
 
 .Layout aside:hover > img {
   display: none;

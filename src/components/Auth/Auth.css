@@ -15,6 +15,12 @@ button {
   cursor: pointer;
 }
 
+.LogOut-img img {
+  width: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
 .img-container {
   position: relative;
 }
@@ -40,5 +46,14 @@ button {
   opacity: 1;
   visibility: visible;
   transition-delay: 0s;
+}
+.LogOut-img img {
+  filter: invert(1);
+}
+.LogOut-img img:hover {
+  filter: invert(0);
+}
+.LogOut-img img:focus {
+  filter: invert(0);
 }
 

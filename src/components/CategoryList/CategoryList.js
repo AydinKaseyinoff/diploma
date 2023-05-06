@@ -26,7 +26,7 @@ export default function CategoryList() {
       <ul>{output}</ul>
       <AddCategory />
       <div className="YouTube">
-        <a href="https://youtu.be/EEvopkbc4FE?t=22">
+        <a href="https://youtu.be/UKrA8hv8dvE">
           <img
             src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png"
             alt="youtube"

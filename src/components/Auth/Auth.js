@@ -14,8 +14,7 @@ export default function Auth() {
           <div className="img-container">
             <img
               src={
-                user?.photoURL ||
-                "https://th.bing.com/th/id/OIP.P3_9dcThQDWbJhAHh9UV9AHaHa?pid=ImgDet&rs=1"
+                user?.photoURL
               }
               alt="Placeholder"
             />
@@ -28,9 +27,22 @@ export default function Auth() {
           </div>
         </span>
       ) : (
-        <span>
-          <div>Hello guest!</div>
-          <button onClick={logIn}>Sign in</button>
+        <span className="LogOut-img">
+          <div className="img-container">
+            <img
+              src={
+                user?.photoURL ||
+                "https://icon-library.com/images/my-profile-icon-png/my-profile-icon-png-3.jpg"
+              }
+              alt="Placeholder"
+            />
+            <div className="img-menu">
+              <NavLink to="/support">SupportPage</NavLink>
+              <p>Coming Soon!</p>
+              <p>Coming Soon!</p>
+              <button onClick={logIn}>Sign in</button>
+            </div>
+          </div>
         </span>
       )}
     </div>

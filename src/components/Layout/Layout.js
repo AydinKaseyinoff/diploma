@@ -9,7 +9,7 @@ export default function Layout(props) {
         <Nav />
       </header>
       <aside className="aside">
-        <img src="https://i.ya-wd.com/images/checklist-icon-png-3.png" alt="category" />
+        <img className="in-img" src="https://cdn.onlinewebfonts.com/svg/download_221204.png" alt="category" />
         <CategoryList className="CategoryList" />
       </aside>
       <main>{props.children}</main>
