@@ -1,6 +1,6 @@
 .Order {
   display: flex;
-  flex-direction: column;
+  flexdirection: column;
   align-items: center;
   width: 500px;
   padding: 1rem;

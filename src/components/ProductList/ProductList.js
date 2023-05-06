@@ -8,22 +8,25 @@ import AddProduct from "../AddProducts/AddProducts";
 export default function ProductList({ category }) {
   const { products } = useContext(AppContext);
 
-  const output = products.filter(products => products.category === category.id)
-  .map(products => (
-    <div key={products.id} className="BoxList">
-      <img src={products.picture} alt={products.name} />
-      <NavLink to={'/products/' + products.slug}>
-        {products.name}
-      </NavLink>
-      <span>{products.price} ₽</span>
-      <AddToCart product={products} />
-    </div>
-  ))
+  const output = products
+    .filter((products) => products.category === category.id)
+    .map((products) => (
+      <div key={products.id} className="BoxList">
+        <img src={products.picture} alt={products.name} />
+        <NavLink to={"/products/" + products.slug}>
+          {products.name}
+        </NavLink>
+        <div>
+          <span>{products.price} ₽</span>
+          <AddToCart product={products} />
+        </div>
+      </div>
+    ));
 
   return (
     <div className="ProductList">
       {output}
       <AddProduct />
     </div>
-  )
+  );
 }

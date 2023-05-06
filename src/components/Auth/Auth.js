@@ -21,8 +21,8 @@ export default function Auth() {
             />
             <div className="img-menu">
               <NavLink to="/support">SupportPage</NavLink>
-              <p>Menu item 2</p>
-              <p>Menu item 3</p>
+              <p>Coming Soon!</p>
+              <p>Coming Soon!</p>
               <button onClick={logOut}>Sign out</button>
             </div>
           </div>

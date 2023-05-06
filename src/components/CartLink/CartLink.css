@@ -14,3 +14,7 @@
 .CartLink :hover > img {
     filter:invert(1);
 }
+.CartLink a :focus > img {
+    background-color: #ffffff;
+    filter: invert(1);
+}

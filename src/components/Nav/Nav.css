@@ -8,6 +8,11 @@
   transition: all 0.2s ease-in-out;
 }
 
+.Nav .NavItem a:focus {
+  background-color: #ffffff;
+  color: #000;
+}
+
 .Nav .NavItem a:hover {
   background-color: #ffffff;
   color: #370f0f;

@@ -5,18 +5,19 @@ import "./CategoryList.css";
 import AddCategory from "../AddCategory/AddCategory";
 import DeleteCategory from "../DeleteCategory/DeleteCategory";
 
-
 export default function CategoryList() {
-
-
   const { categories } = useContext(AppContext);
 
   const output = categories.map((category) => (
-    <li key={category.id}>
-      <NavLink to={`/categories/${category.slug}`}>{category.name}</NavLink>
-
-      <DeleteCategory category={category} />
-    </li>
+    <div className="category-links">
+      <li key={category.id}>
+        <NavLink to={`/categories/${category.slug}`}>
+          <img src={category.icon} alt={category.name} />
+          {category.name}
+        </NavLink>
+        <DeleteCategory category={category} />
+      </li>
+    </div>
   ));
 
   return (

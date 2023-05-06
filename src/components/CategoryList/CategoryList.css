@@ -1,5 +1,5 @@
 .CategoryList {
-  padding-left: 39px;
+  padding-left: 55px;
 }
 
 ul {
@@ -28,4 +28,9 @@ a:hover {
 }
 .icon-category {
   display: flex;
+}
+
+.category-links img {
+  position: absolute;
+  width: 25px;
 }

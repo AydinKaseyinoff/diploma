@@ -9,6 +9,10 @@
     background-color: #66666675;
 }
 
+.AddToCart button:hover > img {
+    filter: invert(0);
+}
+
 .AddToCart img {
     filter: invert(1);
     width: 30px;
