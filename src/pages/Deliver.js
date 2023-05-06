@@ -15,6 +15,7 @@ export default function Deliver() {
       </div>
       <div className="airplane">
         <img
+          loading="eager"
           src="https://www.freepngimg.com/thumb/plane/16-plane-png-image.png"
           alt="Airplane for fast delivery"
         />
