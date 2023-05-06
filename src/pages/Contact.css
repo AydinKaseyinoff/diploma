@@ -9,7 +9,7 @@ a {
     display: flex;
 }
 
-a img {
+.contact a img {
     width: 20px;
 }
 
