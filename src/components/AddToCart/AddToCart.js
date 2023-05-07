@@ -25,7 +25,7 @@ export default function AddToCart({ product }) {
       {showNotification && (
         <div className="Notification">
           <img src="https://cdn-icons-png.flaticon.com/512/1442/1442912.png" alt="CHECKMARK" />
-          <p>Товар успешно добавлен в корзину</p>
+          <p>Product <mark>successfully</mark> added to cart</p>
         </div>
       )}
     </div>

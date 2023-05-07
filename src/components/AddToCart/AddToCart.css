@@ -24,42 +24,48 @@
   background: #ff0000c9;
 }
 .Notification {
-    position: fixed;
-    top: 50%;
-    left: 50%;
+  position: fixed;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #666666;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out, slideUp 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
     transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #666666;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 9999;
-    animation: fadeIn 0.3s ease-in-out, slideUp 0.5s ease-in-out;
   }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes slideUp {
-    0% {
-      transform: translate(-50%, 100%);
-    }
-    100% {
-      transform: translate(-50%, -50%);
-    }
-  }
-  
-  .Notification img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-  }
-  
+}
+
+.Notification img {
+  width: 100px;
+  margin-right: 10px;
+}
+.Notification p mark {
+  background-color: #fff;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 15px;
+  color: green;
+}

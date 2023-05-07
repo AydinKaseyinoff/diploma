@@ -45,9 +45,6 @@ export default function OrderForm() {
         Phone: <input type="tel" name="phone" required />
       </label>
       <label>
-        Email: <input type="email" name="email" required />
-      </label>
-      <label>
         Address: <input type="text" name="address" required />
       </label>
       <button>Submit</button>

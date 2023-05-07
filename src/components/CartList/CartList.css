@@ -1,27 +1,74 @@
+.CartItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.CartItem img {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+}
+
 .CartItem a {
-    color: black;
-    font-size: 25px;
-    padding-right: 60px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  margin-right: 1rem;
 }
-.CartItem a {
-    align-items: center;
-    display: flex;
+
+.CartItem .cart-inpt {
+  margin-right: 1rem;
 }
-.CartList .CartItem {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    border: 1px solid black;
+
+.CartItem input[type="number"] {
+  width: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
-.CartList .CartItem img {
-    width: 50px;
+
+.CartItem span {
+  font-size: 1.2rem;
+  margin-right: 1rem;
 }
-.cart-inpt input {
-    width: 40px;
+
+.remove-btn button {
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
+
 .remove-btn button:hover {
-    background-color: #ce1312;
-    transition: all 50ms ease-in;
-    border-radius: 3px;
-    cursor: pointer;
+  background-color: #333;
+  color: #fff;
+}
+
+.clear-btn button {
+  font-size: 1.2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.clear-btn button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.total-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.total-price span:first-of-type {
+  margin-right: 1rem;
 }
