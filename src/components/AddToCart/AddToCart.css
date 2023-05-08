@@ -37,7 +37,8 @@
   padding: 10px;
   border-radius: 5px;
   z-index: 9999;
-  animation: fadeIn 0.3s ease-in-out, slideUp 0.5s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out, slideUp 0.5s ease-in-out,
+    fadeOut 0.3s ease-in-out forwards 2s;
 }
 
 @keyframes fadeIn {
@@ -58,9 +59,20 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .Notification img {
   width: 100px;
   margin-right: 10px;
+  border-radius: 200px;
+  filter: unset;
 }
 .Notification p mark {
   background-color: #fff;

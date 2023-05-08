@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 import "./CartList.css";
+import BugNt from "../BugNt/BugNt";
+
 
 export default function CartList() {
   const { products, cart, setCart } = useContext(AppContext);
@@ -27,10 +29,7 @@ export default function CartList() {
 
   const totalPrice = products
     .filter((product) => productIds.includes(product.id))
-    .reduce(
-      (total, product) => total + cart[product.id] * product.price,
-      0
-    );
+    .reduce((total, product) => total + cart[product.id] * product.price, 0);
 
   const output = products
     .filter((product) => productIds.includes(product.id))
@@ -40,7 +39,7 @@ export default function CartList() {
           <img src={product.picture} alt={product.name} />
         </div>
         <div className="product-details">
-          <Link to={"/product/" + product.slug}>{product.name}</Link>
+          <Link to={`/products/` + product.slug}> {product.name}</Link>
           <div className="cart-inpt">
             <input
               type="number"
@@ -57,6 +56,7 @@ export default function CartList() {
             <button onClick={() => onItemRemove(product)}>Remove</button>
           </div>
         </div>
+        
       </div>
     ));
 
@@ -71,6 +71,7 @@ export default function CartList() {
           </div>
           <div className="clear-btn">
             <button onClick={clearCart}>Clear All</button>
+            <BugNt />
           </div>
         </div>
       )}

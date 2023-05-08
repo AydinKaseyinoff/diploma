@@ -18,7 +18,7 @@ export default function Product() {
     <div className="Product">
       <div className="ProductOpen">
         <h1>{product.description}</h1>
-        <img src={product.picture} alt={product.name} />
+        <img  src={product.picture} alt={product.name} />
       </div>
       <div>
         <span>{product.price}₽</span>

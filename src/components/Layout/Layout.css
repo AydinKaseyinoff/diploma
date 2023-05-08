@@ -5,7 +5,7 @@
     "header header"
     "aside main"
     "footer footer";
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 10fr;
 }
 
 .Layout header {
