@@ -20,7 +20,7 @@ export default function Auth() {
             />
             <div className="img-menu">
               <NavLink to="/support">SupportPage</NavLink>
-              <p>Coming Soon!</p>
+              <NavLink to="/orders">Orders</NavLink>
               <p>Coming Soon!</p>
               <button onClick={logOut}>Sign out</button>
             </div>
@@ -38,7 +38,7 @@ export default function Auth() {
             />
             <div className="img-menu">
               <NavLink to="/support">SupportPage</NavLink>
-              <p>Coming Soon!</p>
+              <NavLink to="/orders">Orders</NavLink>
               <p>Coming Soon!</p>
               <button onClick={logIn}>Sign in</button>
             </div>

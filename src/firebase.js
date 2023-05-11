@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, onSnapshot } from 'firebase/firestore'
 import { GoogleAuthProvider, getAuth, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,6 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Инициализация базы данных
 export const db = getFirestore(app);
+export const storage = getStorage(app);
 const auth = getAuth(app);
 
 // Получение списка категорий (коллекции документов)
@@ -41,3 +43,11 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
+  export const uploadProductPhoto = async (file) => {
+    const storageRef = ref(storage, `products/${file.name}`);
+    await uploadBytes(storageRef, file);
+    
+    const url = await getDownloadURL(storageRef);
+    return url;
+  };
+  
