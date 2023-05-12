@@ -1,9 +1,12 @@
+import React from "react";
 
-import "./Home.css"
-export default function Home() {
+function Home() {
   return (
-    <div className="Home">
-      <h1 className="text">"Site under construction"</h1>
+    <div>
+      <h1>Welcome to our store!</h1>
+      <h1>Site under constuction</h1>
     </div>
   );
 }
+
+export default Home;
