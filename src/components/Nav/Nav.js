@@ -3,6 +3,7 @@ import "./Nav.css";
 import wink from "../../assets/wink.png";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
+import Search from "../Search/Search";
 
 export default function Nav(props) {
   return (
@@ -33,10 +34,7 @@ export default function Nav(props) {
             <CartLink />
           </li>
           <li>
-            <form className="SearchForm">
-              <input type="text" placeholder="Search..." />
-              <button type="submit">Search</button>
-            </form>
+            <Search />
           </li>
           <li>
             <Auth />

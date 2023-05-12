@@ -8,6 +8,7 @@
   display: contents;
   color: #000;
 }
+
 .BoxList a:hover {
   color: #000;
 }
@@ -32,4 +33,19 @@
 
 .BoxList span {
   color: #000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .BoxList {
+    width: 45%;
+    margin: 10px 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .BoxList {
+    width: 90%;
+    margin: 10px 5px;
+  }
 }
