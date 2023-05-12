@@ -18,7 +18,7 @@ export default function Search() {
   
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form className="search-form" onSubmit={handleFormSubmit}>
       <input
         type="text"
         value={searchQuery}
