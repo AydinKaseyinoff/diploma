@@ -82,3 +82,13 @@ span {
   background-color: #ffffff7c;
   color: #ffffff;
 }
+
+
+@media (max-width: 1210px) {
+  .topbar ul a h1 {
+    display: none;
+  }
+  .topbar ul .Logo img {
+    width: 50px;
+  }
+}
