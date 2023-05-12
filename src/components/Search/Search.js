@@ -1,22 +1,28 @@
 import { useState } from "react";
+import "./Search.css";
 
 export default function Search() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const handleSearch = (event) => {
-    setSearchTerm(event.target.value);
-    const searchRegex = new RegExp(searchTerm, "gi");
-    const matches = document.documentElement.innerHTML.match(searchRegex);
-    if (matches) {
-      const firstMatch = matches[0];
-      const matchIndex = document.documentElement.innerHTML.indexOf(firstMatch);
-      window.scrollTo(0, matchIndex);
-    }
-  };
+  function handleSearchChange(event) {
+    setSearchQuery(event.target.value);
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    // Do something with searchQuery
+    console.log(searchQuery);
+  }
 
   return (
-    <div>
-      <input type="text" value={searchTerm} onChange={handleSearch} placeholder="Search on this page..." />
-    </div>
+    <form onSubmit={handleFormSubmit}>
+      <input
+        type="text"
+        value={searchQuery}
+        onChange={handleSearchChange}
+        placeholder="Search..."
+      />
+      <button type="submit">Search</button>
+    </form>
   );
 }
