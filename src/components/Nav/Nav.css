@@ -83,12 +83,47 @@ span {
   color: #ffffff;
 }
 
-
 @media (max-width: 1210px) {
   .topbar ul a h1 {
     display: none;
   }
   .topbar ul .Logo img {
     width: 50px;
+  }
+}
+
+@media (max-width: 550px) {
+  .NavItem a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none; /* Убираем подчеркивание */
+    cursor: pointer;
+  }
+  .NavItem a:after {
+    background-color: rgb(
+      168 87 56
+    ); /* Цвет линии при наведении на нее курсора мыши */
+    display: block;
+    content: "";
+    height: 2px; /* Высота линии */
+    width: 0%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz--transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .NavItem a:hover:after,
+  .NavItem a:focus:after {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 1020px) {
+  .topbar .NavItem {
+    display: none;
+    margin: 0;
+  }
+  .topbar {
+    justify-content: flex-start;
   }
 }
