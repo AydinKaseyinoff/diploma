@@ -10,9 +10,12 @@ export default function Search() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    // Do something with searchQuery
-    console.log(searchQuery);
+    const searchResults = document.documentElement.innerHTML.match(
+      new RegExp(searchQuery, "gi")
+    );
+    console.log(searchResults);
   }
+  
 
   return (
     <form onSubmit={handleFormSubmit}>
