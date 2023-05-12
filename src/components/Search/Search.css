@@ -4,18 +4,20 @@ form {
 }
 
 input[type="text"] {
-  border: none;
-  border-bottom: 1px solid black;
-  padding: 8px;
-  font-size: 16px;
-  flex: 1;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    flex: 1 1;
 }
 
 button[type="submit"] {
-  background-color: black;
+  background-color: #1a73e8;
   color: white;
+  margin-left: 9px;
   border: none;
-  padding: 8px 16px;
+  border-radius: 5px;
+  padding: 10px 17px;
   font-size: 16px;
   cursor: pointer;
 }
