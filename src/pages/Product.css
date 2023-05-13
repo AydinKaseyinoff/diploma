@@ -1,11 +1,29 @@
 .Product {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 .Product span {
-    font-size: 40px;
-    color: #004a00;
+  font-size: 40px;
+  color: #004a00;
 }
-.Banner img {
+.Product .ProductOpen img {
+  width: 200px;
+}
+.ProductOpen h1 {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .Product span {
+    font-size: 30px;
+  }
+  .ProductOpen h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Product .ProductOpen img {
     width: 100px;
+  }
 }
