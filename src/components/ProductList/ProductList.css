@@ -38,14 +38,24 @@
 /* Media Queries */
 @media (max-width: 870px) {
   .BoxList {
-    width: 45%;
+    width: 40%;
     margin: 10px 5px;
   }
 }
 
 @media (max-width: 480px) {
   .BoxList {
+    width: 40%;
+    margin: 10px 5px;
+  }
+}
+@media (max-width: 370px) {
+  .BoxList {
     width: 90%;
     margin: 10px 5px;
+  }
+  .BoxList img {
+    width: 40%;
+    height: 40%;
   }
 }
