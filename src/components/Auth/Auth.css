@@ -37,6 +37,12 @@ button {
   transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
 }
 
+@media (max-width: 595px) {
+  .img-menu {
+    left: -40px;
+  }
+}
+
 .img-menu p {
   color: #f1f1f1;
   cursor: pointer;
