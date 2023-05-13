@@ -99,3 +99,8 @@ span {
     justify-content: center;
   }
 }
+@media (max-width: 539px) {
+  .topbar .Logo {
+    display: none;
+  }
+}

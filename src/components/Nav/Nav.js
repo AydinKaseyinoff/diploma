@@ -31,10 +31,10 @@ export default function Nav(props) {
             <NavLink to="/deliver">Deliver</NavLink>
           </li>
           <li>
-            <CartLink />
+            <Search />
           </li>
           <li>
-            <Search />
+            <CartLink />
           </li>
           <li>
             <Auth />
