@@ -32,11 +32,14 @@
   transform: translateX(0);
 }
 
-@media (min-width: 550px) {
+@media (min-width: 1020px) {
   .Drawer .backdrop {
     display: none;
   }
   .Drawer .content {
     transform: translateX(-300px);
+  }
+  .Drawer .content .topbar ul {
+    flex-direction: column;
   }
 }

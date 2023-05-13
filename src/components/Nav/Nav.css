@@ -96,6 +96,6 @@ span {
     margin: 0;
   }
   .topbar {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }

@@ -2,6 +2,8 @@
   display: none;
   padding: 0;
   cursor: pointer;
+  position: fixed;
+  top: 20px;
   background-color: transparent;
   border: none;
 }
@@ -11,7 +13,7 @@
   margin: 5px;
   background-color: #0b1c2c;
 }
-@media (max-width: 550px) {
+@media (max-width: 1020px) {
   .NavToggle {
     display: inline-block;
   }
