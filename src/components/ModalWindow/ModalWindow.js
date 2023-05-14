@@ -14,7 +14,9 @@ const ModalWindow = () => {
       <button onClick={openModal}>Catalog</button>
       <Modal className="ModalWrapper" isOpen={isModalOpen} onRequestClose={closeModal}>
         <CategoryList />
-        <button onClick={closeModal}>Закрыть</button>
+        <button onClick={closeModal}>
+          <img src="https://static.vecteezy.com/system/resources/previews/000/440/375/original/vector-cancel-icon.jpg" alt="close-button" />
+        </button>
       </Modal>
     </div>
   );

@@ -8,9 +8,13 @@
   height: 100%;
 }
 
+.ModalWrapper img {
+  width: 25px;
+}
+
 .ModalWrapper {
   inset: 100px;
-  background: white;
+  background: #8d8d8d;
 }
 
 .ModalWindow button {
