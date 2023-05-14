@@ -12,7 +12,7 @@ const ModalWindow = () => {
   return (
     <div className='ModalWindow'>
       <button onClick={openModal}>Catalog</button>
-      <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
+      <Modal className="ModalWrapper" isOpen={isModalOpen} onRequestClose={closeModal}>
         <CategoryList />
         <button onClick={closeModal}>Закрыть</button>
       </Modal>
