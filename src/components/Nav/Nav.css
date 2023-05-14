@@ -24,6 +24,8 @@
 .Logo h1 {
   font-size: 30px;
   font-family: inherit;
+  color: #fff;
+  text-decoration: underline white;
   font-weight: 700;
   font-style: italic;
 }
@@ -90,7 +92,7 @@ span {
 }
 
 
-@media (max-width: 1020px) {
+@media (max-width: 1330px) {
   .topbar .NavItem {
     display: none;
     margin: 0;
