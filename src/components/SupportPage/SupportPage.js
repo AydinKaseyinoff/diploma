@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Input from './Input';
 import Button from './Button';
+import "./SupportPage.css";
 
 function SupportPage() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -13,7 +14,7 @@ function SupportPage() {
   return (
     <div>
       <h1>Свяжитесь с нами</h1>
-      <form onSubmit={handleSubmit}>
+      <form className='Support' onSubmit={handleSubmit}>
         <Input
           label="Имя"
           name="name"
