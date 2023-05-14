@@ -41,6 +41,9 @@
     width: 40%;
     margin: 10px 5px;
   }
+  .ProductList {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
