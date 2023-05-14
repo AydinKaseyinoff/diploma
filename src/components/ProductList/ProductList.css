@@ -65,4 +65,8 @@
   .BoxList {
     width: 80%;
   }
+  .BoxList img {
+    width: 50%;
+    height: 60%;
+  }
 }
