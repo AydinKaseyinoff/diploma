@@ -4,6 +4,7 @@ import wink from "../../assets/wink.png";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
 import Search from "../Search/Search";
+import ModalWindow from "../ModalWindow/ModalWindow";
 
 export default function Nav(props) {
   return (
@@ -16,6 +17,9 @@ export default function Nav(props) {
               <span>SMART</span>PHONE
             </h1>
           </NavLink>
+          <li>
+            <ModalWindow />
+          </li>
         </ul>
         <ul>
           <li className="NavItem">
