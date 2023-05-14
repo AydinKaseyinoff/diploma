@@ -1,6 +1,5 @@
 import React from "react";
 import ModalWindow from "../components/ModalWindow/ModalWindow";
-import CategoryList from "../components/CategoryList/CategoryList";
 
 function Home() {
   return (
