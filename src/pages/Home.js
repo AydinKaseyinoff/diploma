@@ -1,5 +1,4 @@
 import React from "react";
-import ModalWindow from "../components/ModalWindow/ModalWindow";
 
 function Home() {
   return (
@@ -7,7 +6,6 @@ function Home() {
       <h1>Welcome to our store!</h1>
       <h1>Site under constuction</h1>
       <h1>Last updated <mark>14/05/23</mark> </h1>
-      <ModalWindow />
     </div>
   );
 }
