@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import CategoryList from '../CategoryList/CategoryList';
+import "./ModalWindow.css";
 
 const ModalWindow = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -9,8 +10,8 @@ const ModalWindow = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div>
-      <button onClick={openModal}>Открыть модальное окно</button>
+    <div className='ModalWindow'>
+      <button onClick={openModal}>Catalog</button>
       <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
         <CategoryList />
         <button onClick={closeModal}>Закрыть</button>
