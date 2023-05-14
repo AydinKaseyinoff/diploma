@@ -25,7 +25,10 @@ export default function Search() {
         onChange={handleSearchChange}
         placeholder="Search..."
       />
-      <button type="submit">Search</button>
+      <button className="six-none" type="submit">Search</button>
+      <button className="six-show" type="submit">
+        <img src="https://github.com/AydinKaseyinoff/CoffeeShopFigma/blob/main/поиск.png?raw=true" alt="seacrh" />
+      </button>
     </form>
   );
 }

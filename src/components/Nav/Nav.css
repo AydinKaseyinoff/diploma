@@ -106,3 +106,8 @@ span {
     display: none;
   }
 }
+@media (max-width: 460px) {
+  .topbar {
+    justify-content: space-between;
+  }
+}
