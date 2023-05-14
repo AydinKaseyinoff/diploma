@@ -16,12 +16,12 @@ li {
   margin: 0.5rem 0;
 }
 
-a {
+.CategoryList a {
   text-decoration: none;
   color: #000000;
 }
 
-a:hover {
+.CategoryList a:hover {
   color: #000000;
   text-decoration: underline;
 }
