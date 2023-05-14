@@ -17,13 +17,6 @@ export default function Layout(props) {
         <NavToggle callback={toggleDrawer} />
         <Drawer open={drawerOpen} toggle={toggleDrawer} />
       </header>
-      <aside className="aside">
-        <img
-          className="in-img"
-          src="https://cdn.onlinewebfonts.com/svg/download_221204.png"
-          alt="category"
-        />
-      </aside>
       <main>{props.children}</main>
       <footer></footer>
     </div>
