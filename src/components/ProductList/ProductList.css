@@ -54,11 +54,15 @@
 }
 @media (max-width: 370px) {
   .BoxList {
-    width: 90%;
     margin: 10px 5px;
   }
   .BoxList img {
     width: 40%;
     height: 40%;
+  }
+}
+@media (max-width: 336px) {
+  .BoxList {
+    width: 80%;
   }
 }
