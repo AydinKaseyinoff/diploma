@@ -23,8 +23,13 @@ button[type="submit"] {
   font-size: 16px;
   cursor: pointer;
 }
+@media (max-width: 1330px) {
+  .search-form input {
+    width: 500px;
+  }
+}
 
-@media (max-width: 1020px) {
+@media (max-width: 1033px) {
   .search-form input {
     width: 400px;
   }
