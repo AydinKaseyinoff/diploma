@@ -3,6 +3,7 @@ import { logIn, logOut } from "../../firebase";
 import { AppContext } from "../../App";
 import { NavLink } from "react-router-dom";
 import OrderList from "../OrderList/OrderList";
+import "./Profile.css";
 
 
 export default function Profile() {
