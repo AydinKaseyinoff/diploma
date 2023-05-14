@@ -35,19 +35,19 @@ button[type="submit"] {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 925px) {
   .search-form input {
     width: 300px;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 830px) {
   .search-form input {
     width: 200px;
   }
 }
 
-@media (max-width: 539px) {
+@media (max-width: 720px) {
   .search-form input {
     width: 100%;
   }
