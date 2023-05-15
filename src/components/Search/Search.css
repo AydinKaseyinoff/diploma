@@ -73,8 +73,3 @@ button[type="submit"] {
     display: inline;
   }
 }
-@media (max-width: 460px) {
-  .search-form {
-    display: none;
-  }
-}

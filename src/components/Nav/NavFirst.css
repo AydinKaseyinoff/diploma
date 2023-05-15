@@ -36,7 +36,7 @@
 span {
   color: black;
 }
-.topbar {
+.first-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,67 +45,53 @@ span {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.topbar ul {
+.first-nav ul {
   display: flex;
   list-style: none;
 }
 
-.topbar li {
+.first-nav li {
   margin-left: 1rem;
   display: flex;
   align-items: center;
 }
 
 @media (max-width: 1210px) {
-  .topbar ul a h1 {
+  .first-nav ul a h1 {
     display: none;
   }
-  .topbar ul .Logo img {
+  .first-nav ul .Logo img {
     width: 50px;
   }
 }
 
-@media (max-width: 550px) {
-  .NavItem a {
-    display: inline-block;
-    line-height: 1;
-    text-decoration: none; /* Убираем подчеркивание */
-    cursor: pointer;
-  }
-  .NavItem a:after {
-    background-color: rgb(
-      168 87 56
-    ); /* Цвет линии при наведении на нее курсора мыши */
-    display: block;
-    content: "";
-    height: 2px; /* Высота линии */
-    width: 0%;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz--transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-  }
-  .NavItem a:hover:after,
-  .NavItem a:focus:after {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1330px) {
-  .topbar .NavItem {
+  .first-nav .NavItem {
     display: none;
     margin: 0;
   }
-  .topbar {
+  .first-nav {
     justify-content: center;
   }
 }
 @media (max-width: 600px) {
-  .topbar .Logo {
+  .Auth {
+    display: none;
+  }
+}
+@media (max-width: 525px) {
+  .Logo img {
     display: none;
   }
 }
 @media (max-width: 460px) {
-  .topbar {
+    .CartLink {
+      display: none;
+    }
+  }
+
+@media (max-width: 460px) {
+  .first-nav {
     justify-content: space-between;
   }
 }

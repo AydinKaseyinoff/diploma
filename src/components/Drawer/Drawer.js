@@ -1,4 +1,4 @@
-import Nav from "../Nav/Nav";
+import NavTwo from "../Nav/NavTwo";
 import "./Drawer.css"
 
 function Drawer({ open, toggle }) {
@@ -8,7 +8,7 @@ function Drawer({ open, toggle }) {
     <div className={drawerClassNames}>
       <div onClick={toggle} className="backdrop"></div>
       <div className="content">
-        <Nav />
+        <NavTwo />
       </div>
     </div>
   );

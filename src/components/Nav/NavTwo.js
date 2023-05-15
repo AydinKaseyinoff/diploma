@@ -4,21 +4,20 @@ import wink from "../../assets/wink.png";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
 import Search from "../Search/Search";
-import ModalWindow from "../ModalWindow/ModalWindow";
 
 export default function NavTwo(props) {
   return (
-    <div className="Nav">
+    <div className="NavTwo">
       <nav className="topbar last-nav">
         <ul>
-          <NavLink to="/" className="Logo">
+          <NavLink to="/" className="Logo-last">
             <img src={wink} alt="wink" />
             <h1>
               <span>SMART</span>PHONE
             </h1>
           </NavLink>
           <li>
-            <ModalWindow />
+            <Auth />
           </li>
         </ul>
         <ul>
@@ -39,9 +38,6 @@ export default function NavTwo(props) {
           </li>
           <li>
             <CartLink />
-          </li>
-          <li>
-            <Auth />
           </li>
         </ul>
       </nav>

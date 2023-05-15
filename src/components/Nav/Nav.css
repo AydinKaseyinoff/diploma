@@ -1,4 +1,4 @@
-.Nav .NavItem a {
+.NavTwo .NavItem a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1.2rem;
@@ -8,20 +8,20 @@
   transition: all 0.2s ease-in-out;
 }
 
-.Nav .NavItem a:focus {
+.NavTwo .NavItem a:focus {
   background-color: #ffffff;
   color: #000;
 }
 
-.Nav .NavItem a:hover {
+.NavTwo .NavItem a:hover {
   background-color: #ffffff;
   color: #370f0f;
 }
-.Logo {
+.Logo-last {
   display: flex;
   align-items: center;
 }
-.Logo h1 {
+.Logo-last h1 {
   font-size: 30px;
   font-family: inherit;
   color: #fff;
@@ -29,7 +29,7 @@
   font-weight: 700;
   font-style: italic;
 }
-.Logo img {
+.Logo-last img {
   width: 30px;
   padding-right: 10px;
 }
@@ -38,7 +38,7 @@ span {
 }
 .topbar {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: 0 36px;
   background-color: #666666;
@@ -46,71 +46,13 @@ span {
 }
 
 .topbar ul {
-  display: flex;
   list-style: none;
+  display: contents;
 }
 
 .topbar li {
-  margin-left: 1rem;
-  display: flex;
   align-items: center;
 }
-
-
-@media (max-width: 1210px) {
-  .topbar ul a h1 {
-    display: none;
-  }
-  .topbar ul .Logo img {
-    width: 50px;
-  }
-}
-
-@media (max-width: 550px) {
-  .NavItem a {
-    display: inline-block;
-    line-height: 1;
-    text-decoration: none; /* Убираем подчеркивание */
-    cursor: pointer;
-  }
-  .NavItem a:after {
-    background-color: rgb(
-      168 87 56
-    ); /* Цвет линии при наведении на нее курсора мыши */
-    display: block;
-    content: "";
-    height: 2px; /* Высота линии */
-    width: 0%;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz--transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-  }
-  .NavItem a:hover:after,
-  .NavItem a:focus:after {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 1330px) {
-  .topbar .NavItem {
-    display: none;
-    margin: 0;
-  }
-  .topbar {
-    justify-content: center;
-  }
-}
-@media (max-width: 600px) {
-  .topbar .Logo {
-    display: none;
-  }
-}
-@media (max-width: 460px) {
-  .topbar {
-    justify-content: space-between;
-  }
-}
-.last-nav {
-  display: none;
+.topbar .Auth {
+  display: contents;
 }
