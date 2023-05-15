@@ -23,8 +23,8 @@ export default function OrderList() {
       return (
         <div key={product.id}>
           <img src={product.picture} alt={product.name} />
-          {product.name}: {order.cart[productId]} X {product.price} som ={" "}
-          {order.cart[productId] * product.price} som
+          {product.name}: {order.cart[productId]} X {product.price} ₽ ={" "}
+          {order.cart[productId] * product.price} ₽
         </div>
       );
     });
