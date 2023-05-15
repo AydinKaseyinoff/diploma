@@ -2,7 +2,7 @@
   display: none;
   padding: 0;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 20px;
   background-color: transparent;
   border: none;
