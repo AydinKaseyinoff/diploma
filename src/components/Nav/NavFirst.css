@@ -56,7 +56,6 @@ span {
   align-items: center;
 }
 
-
 @media (max-width: 1210px) {
   .topbar ul a h1 {
     display: none;
@@ -90,7 +89,6 @@ span {
     width: 100%;
   }
 }
-
 
 @media (max-width: 1330px) {
   .topbar .NavItem {

@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
-import "./NavFirst.css";
+import "./Nav.css";
 import wink from "../../assets/wink.png";
 import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
 import Search from "../Search/Search";
 import ModalWindow from "../ModalWindow/ModalWindow";
 
-export default function Nav(props) {
+export default function NavTwo(props) {
   return (
     <div className="Nav">
-      <nav className="first-nav">
+      <nav className="topbar last-nav">
         <ul>
           <NavLink to="/" className="Logo">
             <img src={wink} alt="wink" />

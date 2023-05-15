@@ -59,4 +59,6 @@
 .Layout aside:hover > img {
   display: none;
 }
-
+.last-nav {
+  display: none;
+}

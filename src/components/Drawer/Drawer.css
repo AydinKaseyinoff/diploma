@@ -32,9 +32,12 @@
   transform: translateX(0);
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1330px) {
   .Drawer .backdrop {
     display: none;
+  }
+  .topbar ul a h1 {
+    display: inline-block;
   }
   .Drawer .content {
     transform: translateX(-300px);
