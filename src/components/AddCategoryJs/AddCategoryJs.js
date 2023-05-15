@@ -1,12 +1,12 @@
-import { useContext, useState } from "react";
-import "./AddCategoryJs.css";
 import { addDoc } from "firebase/firestore";
+import { useContext, useState } from "react";
 import { categoryCollection } from "../../firebase";
 import { AppContext } from "../../App";
 
-export default function AddCategoryJs() {
-  const {user} = useContext(AppContext);
+const AddCategory = () => {
+  const { user } = useContext(AppContext);
   const [category, setCategory] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   if (!user || !user.isAdmin) {
     return null;
@@ -20,27 +20,41 @@ export default function AddCategoryJs() {
     const name = category.trim();
 
     if (name.length < 5) {
-      alert("Category name must be longer than 5 characters");
+      alert(
+        "Please provide a category name with minimum length of 5 characters."
+      );
+
       return;
     }
 
+    setIsSubmitting(true);
+
     addDoc(categoryCollection, {
       name: name,
-      slug: name.replaceAll(" ", "-").toLowerCase(),
-    }).then(() => {
-      setCategory("");
-    });
+      slug: name.replaceAll(" ", "-").toLocaleLowerCase(),
+    })
+      .then(() => {
+        setCategory("");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   }
 
   return (
-    <div className="AddCategoryJs">
+    <div className="AddCategory">
       <input
+        size="15"
         type="text"
+        value={category}
         placeholder="Category name"
         onChange={onChangeCategory}
-        value={category}
       />
-      <button onClick={onAddCategory}>Add category</button>
+      <button onClick={onAddCategory} disabled={isSubmitting}>
+        +
+      </button>
     </div>
   );
-}
+};
+
+export default AddCategory;
