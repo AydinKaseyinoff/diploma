@@ -47,7 +47,10 @@ span {
 
 @media (max-width: 600px) {
     .first-nav {
-        padding: 0px 0 0 20px;
+        padding: 0px 0 0 35px;
+    }
+    .first-nav ul li:nth-last-child(1) {
+        margin: 0;
     }
 }
 
