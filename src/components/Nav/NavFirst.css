@@ -75,13 +75,13 @@ span {
   }
 }
 
-@media (max-width: 1330px) {
+@media (max-width: 1442px) {
   .first-nav .NavItem {
     display: none;
     margin: 0;
   }
   .first-nav {
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 @media (max-width: 600px) {

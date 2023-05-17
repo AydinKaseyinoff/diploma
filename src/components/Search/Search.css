@@ -1,12 +1,20 @@
 .Search input {
   background: #fff;
   border: 0;
-  border-radius: 15px;
+  border-radius: 5px;
+  width: 412px;
   color: #064d54;
   height: 30px;
   text-align: center;
   outline: none;
 }
+
+@media (max-width: 830px) {
+  .Search input {
+    width: 100%;
+  }
+}
+
 .Search .NoResults {
   position: absolute;
 }
