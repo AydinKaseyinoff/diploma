@@ -21,26 +21,10 @@
   width: 100%;
   align-self: start;
 }
-.ProductItem:nth-child(1) .Product {
+.ProductItem .Product {
   margin: 0;
   position: absolute;
   background-color: #666;
-}
-.ProductItem:nth-child(2) .Product {
-  margin-top: 85px;
-  position: absolute;
-}
-.ProductItem:nth-child(3) .Product {
-  margin-top: 170px;
-  position: absolute;
-}
-.ProductItem:nth-child(4) .Product {
-  margin-top: 255px;
-  position: absolute;
-}
-.ProductItem:nth-child(5) .Product {
-  position: absolute;
-  margin-top: 340px;
 }
 .ProductItem .Product a {
   text-decoration: none;
