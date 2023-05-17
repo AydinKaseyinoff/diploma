@@ -19,7 +19,7 @@ export default function OrderForm() {
           <br />
           To order product, please go to the categories.
         </h3>
-        <img loading="eager" src="https://github.com/AydinKaseyinoff/CoffeeShopFigma/blob/main/empty-cart.png?raw=true" alt="empty-cart" />
+        <img loading="lazy" src="https://github.com/AydinKaseyinoff/CoffeeShopFigma/blob/main/empty-cart.png?raw=true" alt="empty-cart" />
         <ModalWindow />
       </div>
     );
