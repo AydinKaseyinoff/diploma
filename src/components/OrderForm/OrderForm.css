@@ -41,6 +41,9 @@
 
 .Empty-Cart {
   text-align: center;
+  max-width: 540px;
+  margin: auto;
+  padding: 0;
 }
 
 .Empty-Cart img {
