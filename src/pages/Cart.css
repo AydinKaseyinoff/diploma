@@ -1,0 +1,4 @@
+.flex-cart {
+    display: flex;
+    flex-wrap: wrap;
+}
