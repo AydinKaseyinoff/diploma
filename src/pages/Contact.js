@@ -30,16 +30,14 @@ const Contact = () => {
         </a>
       </p>
       <iframe
-        src="
-        https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4373.062224227841!2d-84.48273508374851!3d33.      979344457321346!3m2!1i1024!2i768!4f13. 
-        1!3m3!1m2!1s0x88f513044f1de2e9%3A0xa3447b7f60af04cb!2zRSBQaWVkbW9udCBSZCwgR2VvcmdpYSwg0KHQqNCQ!5e0!3m2!1sru!2skg!4v1675547235177!5m2!1sru!2skg"
-        title="Map of location"
-        width="500"
-        height="600"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5934.870237824385!2d78.7072641295891!3d42.539559913316296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2skg!4v1684296929929!5m2!1sru!2skg"
+        width="600"
+        height="450"
+        style={{border:0}}
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
-        class="map"
+        title="ICHKE_JERGEZ"
       ></iframe>
     </div>
   );
