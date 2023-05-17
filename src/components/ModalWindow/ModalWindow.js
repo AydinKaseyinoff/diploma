@@ -11,7 +11,7 @@ const ModalWindow = () => {
 
   return (
     <div className='ModalWindow'>
-      <button onClick={openModal}>Catalog</button>
+      <button onClick={openModal}>Categories</button>
       <Modal className="ModalWrapper" isOpen={isModalOpen} onRequestClose={closeModal}>
         <CategoryList />
         <button onClick={closeModal}>
