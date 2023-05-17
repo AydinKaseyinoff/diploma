@@ -1,34 +1,74 @@
-import { useState } from "react";
+import { useEffect, useContext, useState, useRef, useMemo } from "react";
+import { AppContext } from "../../App";
+import ProductItem from "../ProductItem/ProductItem";
 import "./Search.css";
 
 export default function Search() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const { products } = useContext(AppContext);
+  const [searchTerm, setSearchTerm] = useState("");
+  const searchRef = useRef(null);
 
-  function handleSearchChange(event) {
-    setSearchQuery(event.target.value);
-  }
+  const filteredProducts = useMemo(() => {
+    if (searchTerm.trim() === "") {
+      return [];
+    }
+    return products
+      .filter((product) =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+      .slice(0, 5);
+  }, [products, searchTerm]);
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    const searchResults = document.documentElement.innerHTML.match(
-      new RegExp(searchQuery, "gi")
-    );
-    console.log(searchResults);
-  }
-  
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+  };
+
+  const handleClickOutside = (event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setSearchTerm("");
+    }
+  };
+
+  const handleLinkClick = () => {
+    setSearchTerm("");
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      handleClickOutside(event);
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    document.addEventListener("touchstart", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("touchstart", handleOutsideClick);
+    };
+  }, []);
 
   return (
-    <form className="search-form" onSubmit={handleFormSubmit}>
+    <div className="Search" ref={searchRef}>
       <input
         type="text"
-        value={searchQuery}
-        onChange={handleSearchChange}
-        placeholder="Search..."
+        placeholder="Search for a game"
+        value={searchTerm}
+        onChange={handleSearch}
+        className="searcher"
       />
-      <button className="six-none" type="submit">Search</button>
-      <button className="six-show" type="submit">
-        <img src="https://github.com/AydinKaseyinoff/CoffeeShopFigma/blob/main/поиск.png?raw=true" alt="seacrh" />
-      </button>
-    </form>
+      {searchTerm && filteredProducts.length === 0 && (
+        <div className="NoResults">No results found</div>
+      )}
+      <div className="SearchResults">
+        {filteredProducts.map((product) => (
+          <ProductItem
+            key={product.id}
+            product={product}
+            onLinkClick={handleLinkClick}
+          />
+        ))}
+      </div>
+    </div>
   );
 }

@@ -22,6 +22,11 @@ export default function Nav(props) {
           </li>
         </ul>
         <ul>
+          <li>
+            <Search />
+          </li>
+        </ul>
+        <ul>
           <li className="NavItem">
             <NavLink to="/">Home</NavLink>
           </li>
@@ -33,9 +38,6 @@ export default function Nav(props) {
           </li>
           <li className="NavItem">
             <NavLink to="/deliver">Deliver</NavLink>
-          </li>
-          <li>
-            <Search />
           </li>
           <li>
             <CartLink />

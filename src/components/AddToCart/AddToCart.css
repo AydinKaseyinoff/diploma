@@ -1,5 +1,6 @@
 .AddToCart button {
   background-color: #ffffffa1;
+  border-radius: 10px;
   align-items: center;
   display: flex;
   transition: all 300ms;
