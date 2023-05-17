@@ -35,6 +35,9 @@
 
 .Layout main {
   grid-area: main;
+  margin: auto;
+  max-width: 96%;
+  padding: 0;
 }
 
 .Layout footer {
