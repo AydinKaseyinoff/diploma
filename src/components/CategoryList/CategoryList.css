@@ -37,3 +37,6 @@ li {
 .category-links img {
   width: 30px;
 }
+.category-links li {
+  margin-bottom: 40px;
+}
