@@ -2,6 +2,7 @@ import { useMatch } from "react-router";
 import NotFound from "./NotFound";
 import { useContext } from "react";
 import { AppContext } from "../App";
+import "./Category.css";
 import ProductList from "../components/ProductList/ProductList";
 
 export default function Category() {
