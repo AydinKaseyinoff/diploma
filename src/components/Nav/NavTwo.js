@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import wink from "../../assets/wink.png";
-import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
 import Search from "../Search/Search";
+import CartLinkBurger from "../CartLink/CartLink-Burger";
 
 export default function NavTwo(props) {
   return (
@@ -37,7 +37,7 @@ export default function NavTwo(props) {
             <Search />
           </li>
           <li>
-            <CartLink />
+            <CartLinkBurger />
           </li>
         </ul>
       </nav>
