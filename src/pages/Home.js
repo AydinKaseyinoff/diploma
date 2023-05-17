@@ -6,7 +6,7 @@ function Home() {
       <h1>Welcome to our store!</h1>
       <h1>Site under constuction</h1>
       <h1>
-        Last updated <mark>15/05/23</mark>
+        Last updated <mark>17/05/23</mark>
       </h1>
     </div>
   );
