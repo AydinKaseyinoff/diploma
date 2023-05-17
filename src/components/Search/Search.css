@@ -18,8 +18,3 @@
 .Search .NoResults {
   position: absolute;
 }
-.Search .SearchResults {
-  position: absolute;
-  right: 400px;
-  top: 0;
-}
