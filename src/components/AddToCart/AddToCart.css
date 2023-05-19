@@ -3,7 +3,7 @@
   border-radius: 10px;
   align-items: center;
   display: flex;
-  transition: all 300ms;
+  transition: all .5s ease-in-out;
 }
 
 .AddToCart button:hover {
