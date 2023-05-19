@@ -27,6 +27,7 @@
 .total {
   display: none;
   background-color: #4caf50;
+  color: #fff;
   border-radius: 20px;
   width: 20px;
   position: absolute;
