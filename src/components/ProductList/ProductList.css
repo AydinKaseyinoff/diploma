@@ -59,6 +59,7 @@
 @media (max-width: 370px) {
   .BoxList {
     margin: 10px 5px;
+    width: 80%;
   }
   .BoxList img {
     width: 40%;
