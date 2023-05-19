@@ -36,10 +36,12 @@
 .remove-btn button {
   font-size: 1.2rem;
   background-color: #fff;
+  border-radius: 10px;
   border: 1px solid #ccc;
   color: #333;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .remove-btn button:hover {
@@ -51,10 +53,12 @@
   font-size: 1.2rem;
   background-color: #fff;
   border: 1px solid #ccc;
+  border-radius: 10px;
   color: #333;
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .clear-btn button:hover {
