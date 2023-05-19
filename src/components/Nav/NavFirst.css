@@ -1,3 +1,9 @@
+.Nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
 .Nav .NavItem a {
   color: #ffffff;
   text-decoration: none;
@@ -46,14 +52,13 @@ span {
 }
 
 @media (max-width: 600px) {
-    .first-nav {
-        padding: 0px 0 0 35px;
-    }
-    .first-nav ul li:nth-last-child(1) {
-        margin: 0;
-    }
+  .first-nav {
+    padding: 0px 0 0 35px;
+  }
+  .first-nav ul li:nth-last-child(1) {
+    margin: 0;
+  }
 }
-
 
 .first-nav ul {
   display: flex;
@@ -95,10 +100,10 @@ span {
   }
 }
 @media (max-width: 460px) {
-    .CartLink {
-      display: none;
-    }
+  .CartLink {
+    display: none;
   }
+}
 
 @media (max-width: 460px) {
   .first-nav {
