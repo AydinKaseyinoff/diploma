@@ -28,7 +28,7 @@ export default function AddToCart({ product }) {
       </button>
       {showNotification && (
         <div className="Notification">
-          <img src={chek} alt="logo" className="chek" />
+          <img src={chek} preload alt="logo" className="chek" />
           <p>
             Product <mark>successfully</mark> added to cart
           </p>

@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { AppContext } from "../../App";
 import { useNavigate } from "react-router";
 import ModalWindow from "../ModalWindow/ModalWindow";
+import emptyCart from "../../assets/emptyCart.png";
 
 export default function OrderForm() {
   const { cart, setCart, user } = useContext(AppContext);
@@ -19,7 +20,7 @@ export default function OrderForm() {
           <br />
           To order product, please go to the categories.
         </h3>
-        <img src="https://github.com/AydinKaseyinoff/CoffeeShopFigma/blob/main/empty-cart.png?raw=true" alt="empty-cart" />
+        <img src={emptyCart} preload alt="empty" />
         <ModalWindow />
       </div>
     );
