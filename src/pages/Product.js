@@ -22,7 +22,7 @@ export default function Product() {
       </div>
       <div>
         <span>{product.price}₽</span>
-        <AddToCart product={products} />
+        <AddToCart product={product} />
       </div>
     </div>
   );
