@@ -8,12 +8,23 @@
   height: 30px;
   text-align: center;
   outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.Search input:hover {
+  border: 2px solid black;
 }
 
 @media (max-width: 830px) {
   .Search input {
     width: 100%;
   }
+}
+
+.Search .SearchResults {
+  position: absolute;
+  right: 400px;
+  top: 0;
 }
 
 .Search .NoResults {
