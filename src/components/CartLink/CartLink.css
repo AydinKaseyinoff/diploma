@@ -28,5 +28,5 @@
   position: relative;
   top: -13px;
   left: -42px;
-  transition: all 700ms ease-in-out;
+  transition: all .1s ease-in-out;
 }
