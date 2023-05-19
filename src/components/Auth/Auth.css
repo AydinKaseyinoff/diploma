@@ -29,6 +29,7 @@ button {
   opacity: 0;
   visibility: hidden;
   position: absolute;
+  border-radius: 5px;
   top: 100%;
   left: -30px;
   background-color: #666666;
