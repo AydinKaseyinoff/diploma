@@ -7,6 +7,8 @@ export default function AddToCart({ product }) {
   const { cart, setCart } = useContext(AppContext);
   const [showNotification, setShowNotification] = useState(false);
 
+  const total = Object.values(cart).reduce((acc, num) => acc + num, 0);
+
   function onAddToCartClick() {
     const qty = cart[product.id] ? cart[product.id] + 1 : 1;
     setCart({
@@ -14,7 +16,7 @@ export default function AddToCart({ product }) {
       [product.id]: qty,
     });
     setShowNotification(true);
-    setTimeout(() => setShowNotification(false), 2500);
+    setTimeout(() => setShowNotification(false), 2000);
   }
 
   return (
@@ -30,7 +32,7 @@ export default function AddToCart({ product }) {
         <div className="Notification">
           <img src={chek} preload alt="logo" className="chek" />
           <p>
-            Product <mark>successfully</mark> added to cart
+            Product <mark>successfully</mark> added to cart {total}
           </p>
         </div>
       )}
