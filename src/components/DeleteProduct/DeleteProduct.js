@@ -1,34 +1,38 @@
-import { useContext } from "react";
-import { AppContext } from "../../App";
 import { deleteDoc, doc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
+import React from "react";
+import { useContext } from "react";
+import { AppContext } from "../../App";
 import { db, storage } from "../../firebase";
 
-export default function DeleteProduct({ product }) {
+export default function Product({ product }) {
   const { user } = useContext(AppContext);
 
   if (!user || !user.isAdmin) {
     return null;
   }
 
-  function onDeleteClick() {
-    if (!window.confirm("Are you sure you want to delete this product?")) {
-      return;
-    }
+  const handleDeleteClick = async () => {
+    try {
+      const confirmed = window.confirm(
+        "Are you sure you want to delete this product?"
+      );
+      if (!confirmed) {
+        return;
+      }
 
-    const picture = ref(storage, product.picture);
-    deleteObject(picture)
-      .then(() => {
-        deleteDoc(doc(db, "products", product.id));
-      })
-      .catch((error) => {
-        console.log("Failed to delete product image:", error);
-      });
-  }
+      const pictureRef = ref(storage, product.picture);
+      await deleteObject(pictureRef);
+      await deleteDoc(doc(db, "products", product.id));
+    } catch (error) {
+      console.log("Failed to delete product:", error);
+    }
+  };
 
   return (
-    <button className="DeleteProduct" onClick={onDeleteClick}>
-      -
-    </button>
+    <div className="Product">
+      {/* Render product details */}
+      <button onClick={handleDeleteClick}>Delete</button>
+    </div>
   );
 }

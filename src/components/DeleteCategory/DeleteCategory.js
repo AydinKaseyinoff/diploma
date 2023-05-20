@@ -3,32 +3,38 @@ import { AppContext } from "../../App";
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 
-export default function DeleteCategory({ category }) {
+const DeleteCategory = ({ category }) => {
   const { user, products } = useContext(AppContext);
 
   if (!user || !user.isAdmin) {
     return null;
   }
 
-  function onDeleteClick() {
-    const count = Object.values(products).filter(product => product.category === category.id).length;
+  const onDeleteClick = async () => {
+    const categoryProducts = Object.values(products).filter(product => product.category === category.id);
 
-    if (count > 0) {
+    if (categoryProducts.length > 0) {
       alert("This category has existing products. Please delete them before deleting a category.");
-
       return;
     }
 
-    if (!window.confirm("Are you sure you want to delete this category?")) {
+    const confirmDelete = window.confirm("Are you sure you want to delete this category?");
+    if (!confirmDelete) {
       return;
     }
 
-    deleteDoc(doc(db, "categories", category.id));
-  }
+    try {
+      await deleteDoc(doc(db, "categories", category.id));
+    } catch (error) {
+      console.log("Failed to delete category:", error);
+    }
+  };
 
   return (
     <button className="DeleteCategory" onClick={onDeleteClick}>
       -
     </button>
   );
-}
+};
+
+export default DeleteCategory;
