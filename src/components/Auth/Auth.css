@@ -49,6 +49,14 @@ button {
   cursor: pointer;
 }
 
+.img-menu a {
+  align-items: center;
+  padding: 3px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+}
+
 .img-container:hover .img-menu {
   opacity: 1;
   visibility: visible;
