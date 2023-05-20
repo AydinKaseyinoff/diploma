@@ -12,7 +12,7 @@ export default function CategoryList() {
     <div className="category-links">
       <li key={category.id}>
         <NavLink to={`/categories/${category.slug}`}>
-          <img src={category.icon} alt={category.name} />
+          <img src={category.icon} preload alt={category.name} />
           {category.name}
         </NavLink>
         <DeleteCategory category={category} />
