@@ -5,13 +5,18 @@ import "./CategoryList.css";
 import AddCategory from "../AddCategory/AddCategory";
 import DeleteCategory from "../DeleteCategory/DeleteCategory";
 
-export default function CategoryList() {
+export default function CategoryList({ onCategoryClick }) {
   const { categories } = useContext(AppContext);
 
+  const handleCategoryClick = (category) => {
+    onCategoryClick(category);
+    // Дополнительная логика, связанная с переходом по категории
+  };
+
   const output = categories.map((category) => (
-    <div className="category-links">
-      <li key={category.id}>
-        <NavLink to={`/categories/${category.slug}`}>
+    <div className="category-links" key={category.id}>
+      <li>
+        <NavLink to={`/categories/${category.slug}`} onClick={() => handleCategoryClick(category)}>
           <img src={category.icon} preload alt={category.name} />
           {category.name}
         </NavLink>
