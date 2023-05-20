@@ -35,6 +35,7 @@
 
 .Layout main {
   grid-area: main;
+  margin-top: 100px;
 }
 
 .Layout footer {
