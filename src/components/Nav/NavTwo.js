@@ -43,7 +43,7 @@ export default function NavTwo(props) {
             <Search />
           </li>
           <li>
-            <CartLinkBurger />
+            <CartLinkBurger onNavigationClick={handleNavigationClick} />
           </li>
         </ul>
       </nav>
