@@ -6,7 +6,7 @@ export default function Logo(props) {
   return (
     <div className="Logo">
       <NavLink to="/">
-      <img src={logo} alt="logo" className="logo" />
+        <img src={logo} alt="logo" className="logo" />
       </NavLink>
     </div>
   );
