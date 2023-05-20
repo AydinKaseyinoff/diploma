@@ -49,3 +49,15 @@
 .Empty-Cart img {
   width: 300px;
 }
+@media (max-width: 460px) {
+  .Empty-Cart img {
+    width: 260px;
+  }
+  .Empty-Cart h1 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .Empty-Cart h3 {
+    font-size: 15px;
+  }
+}
