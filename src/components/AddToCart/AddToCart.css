@@ -3,7 +3,7 @@
   border-radius: 10px;
   align-items: center;
   display: flex;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .AddToCart button:hover {
@@ -81,4 +81,10 @@
   font-weight: bold;
   border-radius: 15px;
   color: green;
+}
+.total-notification {
+  background-color: #4caf50;
+  border-radius: 20px;
+  width: 20px;
+  text-align: center;
 }
