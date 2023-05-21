@@ -1,5 +1,6 @@
 .CategoryList {
   padding-left: 55px;
+  min-height: 100vh;
 }
 
 .CategoryList h3 {
