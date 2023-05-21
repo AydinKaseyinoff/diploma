@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import CategoryList from '../CategoryList/CategoryList';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import CategoryList from "../CategoryList/CategoryList";
 import "./ModalWindow.css";
 
 const ModalWindow = () => {
@@ -15,16 +15,26 @@ const ModalWindow = () => {
   };
 
   return (
-    <div className='ModalWindow'>
+    <div className="ModalWindow">
       <button onClick={openModal}>Categories</button>
-      <Modal className="ModalWrapper" isOpen={isModalOpen} onRequestClose={closeModal}>
+      <Modal
+        className="ModalWrapper"
+        overlayClassName="Overlay"
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        closeTimeoutMS={300} // Длительность анимации закрытия в миллисекундах
+      >
         <CategoryList onCategoryClick={handleCategoryClick} />
         <button onClick={closeModal}>
-          <img src="https://static.vecteezy.com/system/resources/previews/000/440/375/original/vector-cancel-icon.jpg" preload alt="close-button" />
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/000/440/375/original/vector-cancel-icon.jpg"
+            preload
+            alt="close-button"
+          />
         </button>
       </Modal>
     </div>
   );
-}
+};
 
 export default ModalWindow;
