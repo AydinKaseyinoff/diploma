@@ -3,6 +3,7 @@ import "./Layout.css";
 import NavToggle from "../NavToggle/NavToggle";
 import Drawer from "../Drawer/Drawer";
 import { useState } from "react";
+import Footer from "../Footer/Footer";
 
 export default function Layout(props) {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Layout(props) {
         <Drawer open={drawerOpen} toggle={toggleDrawer} />
       </header>
       <main>{props.children}</main>
-      <footer></footer>
+      <footer><Footer /></footer>
     </div>
   );
 }
