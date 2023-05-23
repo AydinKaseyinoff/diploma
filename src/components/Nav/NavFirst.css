@@ -36,8 +36,9 @@
   font-style: italic;
 }
 .Logo img {
-  width: 30px;
-  padding-right: 10px;
+  width: 43px;
+  margin-right: 10px;
+  border-radius: 100px;
 }
 span {
   color: black;
@@ -71,7 +72,7 @@ span {
   align-items: center;
 }
 
-@media (max-width: 1210px) {
+@media (max-width: 1270px) {
   .first-nav ul a h1 {
     display: none;
   }
@@ -80,7 +81,7 @@ span {
   }
 }
 
-@media (max-width: 1442px) {
+@media (max-width: 888px) {
   .first-nav .NavItem {
     display: none;
     margin: 0;
