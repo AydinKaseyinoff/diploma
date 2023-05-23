@@ -36,6 +36,7 @@
 .Layout main {
   grid-area: main;
   margin-top: 100px;
+  margin-bottom: 100px;
   min-height: 100vh;
 }
 @media (max-width: 1210px) {
