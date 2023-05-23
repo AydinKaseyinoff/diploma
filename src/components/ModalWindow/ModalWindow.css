@@ -4,6 +4,13 @@
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.ModalWindow button {
+  background-color: #00a046;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+}
+
 .Overlay {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
