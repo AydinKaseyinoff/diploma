@@ -22,29 +22,31 @@ export default function Nav(props) {
           </li>
         </ul>
         <ul>
-          <li>
-            <Search />
-          </li>
-        </ul>
-        <ul>
-          <li className="NavItem">
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="NavItem">
-            <NavLink to="/about">About</NavLink>
-          </li>
-          <li className="NavItem">
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-          <li className="NavItem">
-            <NavLink to="/deliver">Deliver</NavLink>
-          </li>
-          <li>
-            <CartLink />
-          </li>
-          <li>
-            <Auth />
-          </li>
+          <ul>
+            <li>
+              <Search />
+            </li>
+          </ul>
+          <ul>
+            <li className="NavItem">
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="NavItem">
+              <NavLink to="/about">About</NavLink>
+            </li>
+            <li className="NavItem">
+              <NavLink to="/contact">Contact</NavLink>
+            </li>
+            <li className="NavItem">
+              <NavLink to="/deliver">Deliver</NavLink>
+            </li>
+            <li>
+              <CartLink />
+            </li>
+            <li>
+              <Auth />
+            </li>
+          </ul>
         </ul>
       </nav>
     </div>
