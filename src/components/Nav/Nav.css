@@ -30,8 +30,9 @@
   font-style: italic;
 }
 .Logo-last img {
-  width: 30px;
-  padding-right: 10px;
+  width: 43px;
+  margin-right: 10px;
+  border-radius: 100px;
 }
 span {
   color: black;
