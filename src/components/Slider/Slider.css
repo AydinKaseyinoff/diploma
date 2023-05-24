@@ -3,6 +3,13 @@
   height: 490px;
   overflow: hidden;
 }
+
+@media (max-width: 800px) {
+    .slider-container {
+        height: 280px;
+    }
+}
+
 .slider-image {
   position: absolute;
   top: 0;
