@@ -3,3 +3,9 @@
   max-width: 96%;
   padding: 0;
 }
+.RandomProducts {
+  display: flex;
+}
+.RandomProducts img {
+  width: 60%;
+}
