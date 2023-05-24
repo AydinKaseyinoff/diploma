@@ -24,7 +24,7 @@ export default function Slider() {
   }, [images.length]);
 
   useEffect(() => {
-    const interval = setInterval(goToNextImage, 3000); // Измените интервал времени по вашему выбору (в данном случае - 3 секунды)
+    const interval = setInterval(goToNextImage, 3500); // Измените интервал времени по вашему выбору (в данном случае - 3 секунды)
     return () => {
       clearInterval(interval);
     };
