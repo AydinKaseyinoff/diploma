@@ -60,6 +60,7 @@
   grid-area: footer;
   display: flex;
   width: 100%;
+  background: #666666;
 }
 
 .CategoryList {
