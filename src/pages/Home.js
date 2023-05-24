@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 import "./Home.css";
 import Slider from "../components/Slider/Slider";
+import AddToCart from "../components/AddToCart/AddToCart";
 
 function Home() {
   const { products } = useContext(AppContext);
@@ -37,9 +38,10 @@ function Home() {
         <div className="RandomProducts">
           {randomProducts.map((product) => (
             <div key={product.id} className="RandomProduct">
-              <img loading="eager" src={product.picture} preload alt={product.name} />
+              <img loading="eager" src={product.picture} preload={true} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.price} ₽</p>
+              <AddToCart product={product} />
             </div>
           ))}
         </div>
