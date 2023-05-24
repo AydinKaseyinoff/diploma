@@ -9,7 +9,7 @@ import ModalWindow from "../ModalWindow/ModalWindow";
 export default function Nav(props) {
   return (
     <div className="Nav">
-      <div className="container">
+      <div className="containe">
         <nav className="first-nav">
           <ul>
             <NavLink to="/" className="Logo">
