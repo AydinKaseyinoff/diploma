@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 import "./Home.css";
+import Slider from "../components/Slider/Slider";
 
 function Home() {
   const { products } = useContext(AppContext);
@@ -30,6 +31,7 @@ function Home() {
   return (
     <div className="Home">
       <h1>Welcome to our store!</h1>
+      <Slider />
       <h2>Recommended Products:</h2>
       {randomProducts.length > 0 && (
         <div className="RandomProducts">
