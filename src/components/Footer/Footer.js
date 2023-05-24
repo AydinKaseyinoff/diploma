@@ -6,15 +6,15 @@ export default function Footer() {
     <footer>
       <div class="footer">
         <div class="row-first">
-          <NavLink href="https://youtu.be/taaSYRW2Rg8">
+          <a href="https://youtu.be/taaSYRW2Rg8" target="_blank" rel="noopener noreferrer">
             <img
               src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png"
               alt="youtube"
             />
-          </NavLink>
-          <NavLink href="https://www.linkedin.com/in/айдин-касейинов-8750b725b/">
+          </a>
+          <a href="https://www.linkedin.com/in/айдин-касейинов-8750b725b/" target="_blank" rel="noopener noreferrer">
             <img src="https://pngimg.com/uploads/linkedIn/linkedIn_PNG39.png" alt="linkedin" />
-          </NavLink>
+          </a>
         </div>
 
         <div class="row">
