@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import "./Slider.css"
 
 export default function Slider() {
@@ -15,24 +15,34 @@ export default function Slider() {
     setCurrentImageIndex(index);
   };
 
-  const goToNextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const handleScroll = (event) => {
+    const delta = Math.sign(event.deltaY);
+    if (delta > 0) {
+      // Scroll down, go to the next image or loop back to the first image
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    } else if (delta < 0) {
+      // Scroll up, go to the previous image or loop back to the last image
+      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    }
   };
 
-  const goToPreviousImage = () => {
+  const goToNextImage = useCallback(() => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  }, [images.length]);
+
+  const goToPreviousImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
   useEffect(() => {
-    const interval = setInterval(goToNextImage, 3000); // Здесь 3000 - задержка в миллисекундах между автоматическим переключением слайдов
-
+    const interval = setInterval(goToNextImage, 39000); // Измените интервал времени по вашему выбору (в данном случае - 3 секунды)
     return () => {
       clearInterval(interval);
     };
   }, [goToNextImage]);
 
   return (
-    <div className="Home">
+    <div className="Home" onWheel={handleScroll}>
       <div className="slider-container">
         {images.map((image, index) => (
           <img
