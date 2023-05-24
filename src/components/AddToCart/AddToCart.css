@@ -28,6 +28,7 @@
 .Notification {
   position: fixed;
   flex-direction: column;
+  width: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,6 +77,11 @@
   border-radius: 200px;
   filter: unset;
 }
+
+.Notification p {
+  flex-wrap: wrap;
+}
+
 .Notification p mark {
   background-color: #fff;
   padding: 5px;
