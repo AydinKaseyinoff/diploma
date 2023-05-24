@@ -9,46 +9,48 @@ import ModalWindow from "../ModalWindow/ModalWindow";
 export default function Nav(props) {
   return (
     <div className="Nav">
-      <nav className="first-nav">
-        <ul>
-          <NavLink to="/" className="Logo">
-            <img src={wink} alt="wink" />
-            <h1>
-              <span>SMART</span>PHONE
-            </h1>
-          </NavLink>
-          <li>
-            <ModalWindow />
-          </li>
-        </ul>
-        <ul>
+      <div className="container">
+        <nav className="first-nav">
           <ul>
+            <NavLink to="/" className="Logo">
+              <img src={wink} alt="wink" />
+              <h1>
+                <span>SMART</span>PHONE
+              </h1>
+            </NavLink>
             <li>
-              <Search />
+              <ModalWindow />
             </li>
           </ul>
           <ul>
-            <li className="NavItem">
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li className="NavItem">
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li className="NavItem">
-              <NavLink to="/contact">Contact</NavLink>
-            </li>
-            <li className="NavItem">
-              <NavLink to="/deliver">Deliver</NavLink>
-            </li>
-            <li>
-              <CartLink />
-            </li>
-            <li>
-              <Auth />
-            </li>
+            <ul>
+              <li>
+                <Search />
+              </li>
+            </ul>
+            <ul>
+              <li className="NavItem">
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li className="NavItem">
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li className="NavItem">
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+              <li className="NavItem">
+                <NavLink to="/deliver">Deliver</NavLink>
+              </li>
+              <li>
+                <CartLink />
+              </li>
+              <li>
+                <Auth />
+              </li>
+            </ul>
           </ul>
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </div>
   );
 }
