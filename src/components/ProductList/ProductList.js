@@ -13,7 +13,7 @@ export default function ProductList({ category }) {
     .filter((products) => products.category === category.id)
     .map((products) => (
       <div key={products.id} className="BoxList">
-        <img src={products.picture} preload alt={products.name} />
+        <img src={products.picture} preload={true} alt={products.name} />
         <NavLink to={"/products/" + products.slug}>
           {products.name}
         </NavLink>
