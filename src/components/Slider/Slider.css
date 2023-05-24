@@ -9,6 +9,11 @@
         height: 280px;
     }
 }
+@media (max-width: 500px) {
+  .slider-container {
+    height: 235px;
+  }
+}
 
 .slider-image {
   position: absolute;
