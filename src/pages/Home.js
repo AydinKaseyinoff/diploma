@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
+import "./Home.css";
 
 function Home() {
   const { products } = useContext(AppContext);
@@ -29,12 +30,12 @@ function Home() {
   return (
     <div className="Home">
       <h1>Welcome to our store!</h1>
+      <h2>Recommended Products:</h2>
       {randomProducts.length > 0 && (
         <div className="RandomProducts">
-          <h2>Random Products:</h2>
           {randomProducts.map((product) => (
             <div key={product.id} className="RandomProduct">
-              <img src={product.picture} alt={product.name} />
+              <img loading="eager" src={product.picture} preload alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.price} ₽</p>
             </div>
