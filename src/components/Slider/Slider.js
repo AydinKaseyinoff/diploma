@@ -4,10 +4,15 @@ import "./Slider.css"
 export default function Slider() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [
-    'https://static.tildacdn.com/tild6132-3766-4530-b330-396665616135/iPhone_14_Pro_7115a2.jpg',
-    'https://the-geek.ru/wp-content/uploads/2022/08/d361d85ae28e196a0513163d6c9ef5b4b6b0fdfb8d8432fdfcb15750be8566ed.jpg',
-    'https://cdn.wccftech.com/wp-content/uploads/2022/07/one-14-1.jpg',
-    'https://images.macrumors.com/t/6ZAioIhw6uwqU-Z_ZHb3TvMHhtc=/1600x1200/smart/article-new/2022/01/iPhone-14-Mock-pill-and-hole-thumb.jpg', // Replace this URL with the URL of the next image
+    'https://pbs.twimg.com/media/FJEsEp1XwAAClGD?format=jpg&name=large',
+    'https://thumbs.dreamstime.com/b/векторный-баннер-для-iphone-винницкая-украина-ноября-иллюстрация-вектора-229970813.jpg',
+    'https://i.pinimg.com/originals/f8/c9/42/f8c9422d6dbf4f4010056359889cec9b.png',
+    'https://www.smartone.com/service-site/iPhone11/img/english/buy_now/index_1400x700.jpg',
+    'https://assets.materialup.com/uploads/c73cc104-4552-457e-9b7c-e05518ecc5b9/preview.jpg',
+    'https://on-desktop.com/wps/_New_Blue_Iphone_5C_046066_.jpg',
+    'https://myotakuworld.com/wp-content/uploads/2022/05/apple-iphone-x-sims-mod-1536x864.webp',
+    'https://letstalk-tech.s3.amazonaws.com/wp-content/uploads/2015/11/iPhone-6-cases-roundup-banner.jpg',
+    'https://i.pinimg.com/originals/2f/5a/96/2f5a962c8e213fde7c0698fd99082f14.jpg', // Replace this URL with the URL of the next image
     // Add other image URLs as needed
   ];
 
@@ -31,7 +36,7 @@ export default function Slider() {
   }, [goToNextImage]);
 
   return (
-    <div className="Home">
+    <div className="slider">
       <div className="slider-container" onWheel={(event) => event.preventDefault()}>
         {images.map((image, index) => (
           <img
