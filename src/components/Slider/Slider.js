@@ -15,17 +15,6 @@ export default function Slider() {
     setCurrentImageIndex(index);
   };
 
-  const handleScroll = (event) => {
-    const delta = Math.sign(event.deltaY);
-    if (delta > 0) {
-      // Scroll down, go to the next image or loop back to the first image
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    } else if (delta < 0) {
-      // Scroll up, go to the previous image or loop back to the last image
-      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    }
-  };
-
   const goToNextImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   }, [images.length]);
@@ -42,8 +31,8 @@ export default function Slider() {
   }, [goToNextImage]);
 
   return (
-    <div className="Home" onWheel={handleScroll}>
-      <div className="slider-container">
+    <div className="Home">
+      <div className="slider-container" onWheel={(event) => event.preventDefault()}>
         {images.map((image, index) => (
           <img
             key={index}
