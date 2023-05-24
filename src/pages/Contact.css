@@ -1,38 +1,50 @@
-.contact {
-  margin: 20px 0;
+
+.title {
+  font-size: 50px;
+  color: white;
   display: flex;
-  flex-direction: column;
-}
-
-a {
-    align-items: center;
-    display: flex;
-}
-
-.contact a img {
-    width: 20px;
-}
-
-.contact h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.contact p {
-  margin: 10px 0;
-}
-
-.contact .email {
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
 }
-
-.contact .social a {
-  margin: 0 10px;
-  color: rgb(255, 0, 0);
-  font-weight: bolder;
+.container {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.contact .social a:nth-last-child(1) {
-    margin: 0 10px;
-    color: rgb(0, 94, 255);
-  }
+.container__elem {
+  padding: 3%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  flex: 1 1 0px;
+}
+
+.elem__block {
+  height: 190px;
+  width: 190px;
+  background-image: linear-gradient(to right, #f05a28, #ec008c);
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.elem__block:hover {
+  background: linear-gradient(145deg, #ff4000 0, #ff0099 100%);
+}
+
+.text {
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-img:hover {
+  transform: scale(1.1);
+}
