@@ -19,10 +19,7 @@ export default function Auth() {
               alt="Placeholder"
             />
             <div className="img-menu">
-              <NavLink to="/support">SupportPage</NavLink>
-              <NavLink to="/orders">Orders</NavLink>
               <NavLink to="/profile">Your Profile</NavLink>
-              <p>Coming Soon!</p>
               <button onClick={logOut}>Sign out</button>
             </div>
           </div>
