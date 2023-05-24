@@ -1,37 +1,46 @@
-import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 
 function Home() {
   const { products } = useContext(AppContext);
+  const [randomProducts, setRandomProducts] = useState([]);
 
-  // Генерируем случайное число в диапазоне от 0 до длины массива продуктов
-  const randomIndexes = [];
-  while (randomIndexes.length < 3) {
-    const randomIndex = Math.floor(Math.random() * products.length);
-    if (!randomIndexes.includes(randomIndex)) {
-      randomIndexes.push(randomIndex);
-    }
-  }
+  useEffect(() => {
+    const getRandomProducts = () => {
+      if (products.length === 0) {
+        setRandomProducts([]);
+        return;
+      }
 
-  // Получаем случайные продукты по сгенерированным индексам
-  const randomProducts = randomIndexes.map((index) => products[index]);
+      const randomIndexes = [];
+      while (randomIndexes.length < 5) {
+        const randomIndex = Math.floor(Math.random() * products.length);
+        if (!randomIndexes.includes(randomIndex)) {
+          randomIndexes.push(randomIndex);
+        }
+      }
+      const selectedProducts = randomIndexes.map((index) => products[index]);
+      setRandomProducts(selectedProducts);
+    };
+
+    getRandomProducts();
+  }, [products]);
 
   return (
     <div className="Home">
       <h1>Welcome to our store!</h1>
-      <h2>Featured Products:</h2>
-      <div className="ProductList">
-        {randomProducts.map((product) => (
-          <div key={product.id} className="BoxList">
-            <img src={product.picture} alt={product.name} />
-            <NavLink to={"/products/" + product.slug}>{product.name}</NavLink>
-            <div>
-              <span>{product.price} ₽</span>
+      {randomProducts.length > 0 && (
+        <div className="RandomProducts">
+          <h2>Random Products:</h2>
+          {randomProducts.map((product) => (
+            <div key={product.id} className="RandomProduct">
+              <img src={product.picture} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>{product.price} ₽</p>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
