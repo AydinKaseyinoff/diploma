@@ -1,10 +1,11 @@
 .CategoryList {
   padding-left: 55px;
+  margin-top: 50px;
   min-height: 100vh;
 }
 
 .CategoryList h3 {
-  color: #000000;
+  color: #fff;
 }
 
 ul {
