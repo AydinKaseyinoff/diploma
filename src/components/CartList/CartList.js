@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AppContext } from "../../App";
 import { Link } from "react-router-dom";
 import "./CartList.css";
-import BugNt from "../BugNt/BugNt";
 
 
 export default function CartList() {
@@ -71,7 +70,6 @@ export default function CartList() {
           </div>
           <div className="clear-btn">
             <button onClick={clearCart}>Clear All</button>
-            <BugNt />
           </div>
         </div>
       )}
