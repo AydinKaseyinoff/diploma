@@ -1,16 +1,23 @@
+.Contact {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 .title {
   font-size: 50px;
-  color: white;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
 }
 .container {
-  background-color: black;
   display: flex;
   justify-content: space-evenly;
+  color: #000;
   flex-wrap: wrap;
 }
 
@@ -25,7 +32,7 @@
 .elem__block {
   height: 190px;
   width: 190px;
-  background-image: linear-gradient(to right, #f05a28, #ec008c);
+  background-color: #666666;
   border-radius: 5%;
   display: flex;
   align-items: center;
@@ -34,17 +41,21 @@
 }
 
 .elem__block:hover {
-  background: linear-gradient(145deg, #ff4000 0, #ff0099 100%);
+  background-color: #05bc52;
 }
 
 .text {
-  color: white;
+  color: #000;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hover-img:hover {
+.hover-img {
+  transition: all 0.1s;
+}
+
+.elem__block:hover > .hover-img {
   transform: scale(1.1);
 }
