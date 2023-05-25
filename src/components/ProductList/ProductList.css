@@ -1,4 +1,4 @@
-.BoxList img {
+.ProductImage img {
   height: 50%;
   width: 60%;
 }
@@ -16,15 +16,42 @@
 
 .BoxList {
   display: flex;
+  position: relative;
+  overflow: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 158px;
   border: 1px solid #000;
   border-radius: 10px;
   padding: 10px 10px;
   margin: 10px 10px;
   background-color: #f9f9f9;
+}
+
+.BoxList {
+  width: 200px; /* Установите желаемую ширину для продукта */
+  height: 300px; /* Установите желаемую высоту для продукта */
+  /* Дополнительные стили для продукта */
+}
+@media (max-width: 768px) {
+  .BoxList {
+    width: 100%; /* Ширина продукта на узких экранах */
+    height: auto; /* Автоматическая высота продукта на узких экранах */
+    /* Дополнительные стили для продукта на узких экранах */
+  }
+}
+
+.ProductImage {
+   /* Установите желаемую ширину для изображения продукта */
+  height: 200px;
+  max-width: 100%; /* Установите желаемую высоту для изображения продукта */
+  /* Дополнительные стили для изображения продукта */
+}
+@media (max-width: 768px) {
+  .ProductImage {
+    height: 150px; /* Измененная высота изображения на узких экранах */
+    /* Дополнительные стили для изображения продукта на узких экранах */
+  }
 }
 
 .ProductList {

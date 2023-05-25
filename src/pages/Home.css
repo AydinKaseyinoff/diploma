@@ -8,12 +8,5 @@
 
 .RandomProducts {
   display: flex;
-}
-@media (max-width: 800px) {
-  .RandomProducts {
-    flex-wrap: wrap;
-  }
-}
-.RandomProducts img {
-  width: 60%;
+  justify-content: space-between;
 }
