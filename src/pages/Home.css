@@ -11,3 +11,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+.RandomProducts .BoxList .ProductImage {
+  height: 145px;
+}
