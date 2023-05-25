@@ -74,6 +74,10 @@
   color: #fff;
 }
 
+.clear-btn {
+  margin-bottom: 30px;
+}
+
 .clear-btn button {
   font-size: 1.2rem;
   background-color: #fff;
