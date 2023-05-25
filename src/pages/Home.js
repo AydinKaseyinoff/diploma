@@ -16,7 +16,7 @@ function Home() {
       }
 
       const randomIndexes = [];
-      while (randomIndexes.length < 15) {
+      while (randomIndexes.length < 6) {
         const randomIndex = Math.floor(Math.random() * products.length);
         if (!randomIndexes.includes(randomIndex)) {
           randomIndexes.push(randomIndex);
