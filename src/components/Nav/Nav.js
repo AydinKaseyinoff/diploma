@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
 import "./NavFirst.css";
 import wink from "../../assets/wink.png";
-import CartLink from "../CartLink/CartLink";
 import Auth from "../Auth/Auth";
 import Search from "../Search/Search";
 import ModalWindow from "../ModalWindow/ModalWindow";
+import Modaler from "../Modal/Modal";
 
 export default function Nav(props) {
   return (
@@ -42,7 +42,7 @@ export default function Nav(props) {
                 <NavLink to="/deliver">Deliver</NavLink>
               </li>
               <li>
-                <CartLink />
+                <Modaler />
               </li>
               <li>
                 <Auth />
