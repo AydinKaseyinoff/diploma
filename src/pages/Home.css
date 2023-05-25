@@ -6,11 +6,16 @@
   padding-right: 20px;
 }
 
+.BoxList {
+  flex-shrink: 0;
+}
+
 .RandomProducts {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  overflow-x: auto;
 }
+
 .RandomProducts .BoxList .ProductImage {
   height: 145px;
 }
+
