@@ -89,10 +89,6 @@
     margin: 10px 5px;
     width: 80%;
   }
-  .BoxList img {
-    height: 70%;
-    width: 30%;
-  }
 }
 @media (max-width: 336px) {
   .BoxList {
