@@ -7,7 +7,7 @@ const Contact = () => {
       <h1 className="title">CONTACT US</h1>
       <div className="container">
         <div className="container__elem">
-          <a href="tel:+1234567890">
+          <a href="tel:+996708338944">
             <div className="elem__block">
               <img
                 className="hover-img"
@@ -21,7 +21,7 @@ const Contact = () => {
           <p className="text">Lorem ipsum dolor sit amet.</p>
         </div>
         <div className="container__elem">
-          <a href="whatsapp://send?phone=номер">
+          <a href="whatsapp://send?phone=+996708338944">
             <div className="elem__block">
               <img
                 className="hover-img"
