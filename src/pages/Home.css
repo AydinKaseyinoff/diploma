@@ -10,11 +10,12 @@
   flex-shrink: 0;
 }
 
+
 .RandomProducts {
   display: flex;
-  overflow-x: auto;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
-
 .RandomProducts .BoxList .ProductImage {
   height: 145px;
 }
