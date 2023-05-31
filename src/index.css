@@ -12,4 +12,54 @@ code {
     monospace;
 }
 
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  p {
+    font-size: 12px;
+  }
+}
+
+/* Продолжайте добавлять адаптивные стили для остальных элементов, таких как заголовки, параграфы и т. д. */
