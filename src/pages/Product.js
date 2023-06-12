@@ -4,6 +4,7 @@ import { AppContext } from "../App";
 import NotFound from "./NotFound";
 import "./Product.css"
 import AddToCart from "../components/AddToCart/AddToCart";
+import ProductPage from "../components/ProductReviewForm/ProductReviewForm";
 
 export default function Product() {
   const { params } = useMatch("/products/:slug");
@@ -24,6 +25,7 @@ export default function Product() {
         <span>{product.price}₽</span>
         <AddToCart product={product} />
       </div>
+      <ProductPage />
     </div>
   );
 }

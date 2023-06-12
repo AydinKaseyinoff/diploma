@@ -20,7 +20,7 @@ export default function OrderForm() {
           <br />
           To order product, please go to the categories.
         </h3>
-        <img src={emptyCart} preload={true} alt="empty" />
+        <img src={emptyCart} preload="true" alt="empty" />
         <ModalWindow />
       </div>
     );

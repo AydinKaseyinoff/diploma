@@ -38,7 +38,7 @@ function Home() {
         <div className="RandomProducts">
           {randomProducts.map((product) => (
             <div key={product.id} className="BoxList">
-              <img className="ProductImage" loading="eager" src={product.picture} preload={true} alt={product.name} />
+              <img className="ProductImage" loading="eager" src={product.picture} preload="true" alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.price} ₽</p>
               <AddToCart product={product} />

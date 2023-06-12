@@ -17,7 +17,7 @@ export default function CategoryList({ onCategoryClick }) {
     <div className="category-links" key={category.id}>
       <li>
         <NavLink to={`/categories/${category.slug}`} onClick={() => handleCategoryClick(category)}>
-          <img src={category.icon} preload={true} alt={category.name} />
+          <img src={category.icon} preload="true" alt={category.name} />
           {category.name}
         </NavLink>
         <DeleteCategory category={category} />

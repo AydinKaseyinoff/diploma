@@ -1,17 +1,20 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, onSnapshot } from "firebase/firestore";
 import {
-  GoogleAuthProvider,
+  getFirestore,
+  collection,
+  onSnapshot,
+  addDoc,
+  getDocs,
+  where,
+} from "firebase/firestore";
+import {
   getAuth,
   onAuthStateChanged,
   signInWithPopup,
   signOut,
+  GoogleAuthProvider,
 } from "firebase/auth";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,8 +25,10 @@ const firebaseConfig = {
   messagingSenderId: "604460885243",
   appId: "1:604460885243:web:aece7d2e1cfeff94b9fc5e",
 };
+
 // Инициализация приложения
 const app = initializeApp(firebaseConfig);
+
 // Инициализация базы данных
 export const db = getFirestore(app);
 export const storage = getStorage(app);
@@ -48,6 +53,7 @@ export const onCategoriesLoad = (callback) =>
       }))
     )
   );
+
 // отправка фотографии и получение ее url
 export const uploadProductPhoto = async (file) => {
   const storageRef = ref(storage, `products/${file.name}`);
@@ -59,4 +65,23 @@ export const uploadProductPhoto = async (file) => {
     console.log("Failed to upload product photo:", error);
     throw error; // Пробросить ошибку для дальнейшей обработки, если необходимо
   }
+};
+
+// Получение отзывов для конкретного продукта
+export const getProductReviews = async (productId) => {
+  const reviewsRef = collection(db, "productReviews");
+  const querySnapshot = await getDocs(
+    where(reviewsRef, "productId", "==", productId)
+  );
+  const reviews = [];
+  querySnapshot.forEach((doc) => {
+    reviews.push({ id: doc.id, ...doc.data() });
+  });
+  return reviews;
+};
+
+// Добавление отзыва для конкретного продукта
+export const addProductReview = async (productId, review, rating) => {
+  const reviewsRef = collection(db, "productReviews");
+  await addDoc(reviewsRef, { productId, review, rating });
 };

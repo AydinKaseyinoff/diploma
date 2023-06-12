@@ -28,7 +28,7 @@ const ModalWindow = () => {
         <button onClick={closeModal}>
           <img
             src="https://static.vecteezy.com/system/resources/previews/000/440/375/original/vector-cancel-icon.jpg"
-            preload={true}
+            preload="true"
             alt="close-button"
           />
         </button>
