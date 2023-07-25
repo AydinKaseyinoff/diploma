@@ -19,7 +19,7 @@ export default function NavTwo(props) {
           <NavLink to="/" className="Logo-last">
             <img src={wink} alt="wink" />
             <h1>
-              <span>SMART</span>PHONE
+              <span>ГАРДЕРОБ</span>24/7
             </h1>
           </NavLink>
           <li>
