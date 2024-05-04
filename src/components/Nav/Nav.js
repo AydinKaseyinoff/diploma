@@ -15,7 +15,7 @@ export default function Nav(props) {
             <NavLink to="/" className="Logo">
               <img src={wink} alt="wink" />
               <h1>
-                <span>ГАРДЕРОБ</span>24/7
+                <span>Smart</span>Phone
               </h1>
             </NavLink>
             <li>
