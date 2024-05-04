@@ -42,30 +42,35 @@ function App() {
   }, [cart] )
 
   useEffect(() => {
-    onCategoriesLoad(setCategories)
-
-    getDocs(productsCollection)
-      .then(({ docs }) => {
-        console.log(docs);
-        setProducts(
-          docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }))
-        );
+    const fetchProducts = async () => {
+      try {
+        const productsSnapshot = await getDocs(productsCollection);
+        const productsData = productsSnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setProducts(productsData);
+      } catch (error) {
+        console.error('Error fetching products:', error);
       }
-      )
-    getDocs(ordersCollection)
-      .then(({ docs }) => {
-        console.log(docs);
-        setOrders(
-          docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }))
-        );
-      });
+    };
 
+    const fetchOrders = async () => {
+      try {
+        const ordersSnapshot = await getDocs(ordersCollection);
+        const ordersData = ordersSnapshot.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setOrders(ordersData);
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+      }
+    };
+
+    onCategoriesLoad(setCategories);
+    fetchProducts();
+    fetchOrders();
     
     onAuthChange(user => {
       if (user) {
@@ -73,9 +78,7 @@ function App() {
       }
       setUser(user);
     });
-
   }, []);
-
 
   return (
     <div className="App">
