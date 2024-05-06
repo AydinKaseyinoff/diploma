@@ -1,3 +1,4 @@
+
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -62,8 +63,8 @@ export const uploadProductPhoto = async (file) => {
     const downloadURL = await getDownloadURL(storageRef);
     return downloadURL;
   } catch (error) {
-    console.log("Failed to upload product photo:", error);
-    throw error; // Пробросить ошибку для дальнейшей обработки, если необходимо
+    console.error("Failed to upload product photo:", error);
+    throw error;
   }
 };
 
@@ -83,5 +84,10 @@ export const getProductReviews = async (productId) => {
 // Добавление отзыва для конкретного продукта
 export const addProductReview = async (productId, review, rating) => {
   const reviewsRef = collection(db, "productReviews");
-  await addDoc(reviewsRef, { productId, review, rating });
+  try {
+    await addDoc(reviewsRef, { productId, review, rating });
+  } catch (error) {
+    console.error("Failed to add product review:", error);
+    throw error;
+  }
 };
